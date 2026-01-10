@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { label: "ABOUT ME", href: "#about", active: true },
+    { label: "ABOUT ME", href: "/", active: location.pathname === "/" },
     { label: "RESUME", href: "#resume", active: false },
-    { label: "PROJECTS", href: "#projects", active: false },
+    { label: "PROJECTS", href: "/projects", active: location.pathname === "/projects" },
     { label: "CONTACT", href: "#contact", active: false },
   ];
 
@@ -25,13 +27,23 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className={`nav-link ${item.active ? "nav-link-active" : ""}`}
-              >
-                {item.label}
-              </a>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className={`nav-link ${item.active ? "nav-link-active" : ""}`}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className={`nav-link ${item.active ? "nav-link-active" : ""}`}
+                >
+                  {item.label}
+                </a>
+              )
             ))}
           </nav>
 
@@ -50,14 +62,25 @@ const Header = () => {
           <nav className="md:hidden py-4 border-t border-border mt-4">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className={`nav-link ${item.active ? "nav-link-active" : ""}`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+                item.href.startsWith("/") ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className={`nav-link ${item.active ? "nav-link-active" : ""}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className={`nav-link ${item.active ? "nav-link-active" : ""}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
             </div>
           </nav>
