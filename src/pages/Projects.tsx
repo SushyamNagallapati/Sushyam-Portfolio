@@ -73,44 +73,59 @@ const Projects = () => {
           </div>
 
           {/* Projects List */}
-          <div className="space-y-24">
-            {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16"
-              >
-                {/* Text Content */}
-                <div className="flex-1 max-w-md">
-                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                    {project.name}
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    <Button variant="default" size="sm" className="rounded-full px-6" asChild>
-                      <a href={project.viewMoreUrl}>View more</a>
-                    </Button>
-                    <Button variant="outline" size="sm" className="rounded-full px-6 gap-2" asChild>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4" />
-                        Open in Github
-                      </a>
-                    </Button>
+          {filteredProjects.length > 0 ? (
+            <div className="space-y-24">
+              {filteredProjects.map((project) => (
+                <div
+                  key={project.id}
+                  className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16"
+                >
+                  {/* Text Content */}
+                  <div className="flex-1 max-w-md">
+                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
+                      {project.name}
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <Button variant="default" size="sm" className="rounded-full px-6" asChild>
+                        <a href={project.viewMoreUrl}>View more</a>
+                      </Button>
+                      <Button variant="outline" size="sm" className="rounded-full px-6 gap-2" asChild>
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4" />
+                          Open in Github
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* Project Image */}
+                  <div className="flex-1">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full max-w-md h-auto object-cover shadow-lg"
+                    />
                   </div>
                 </div>
-
-                {/* Project Image */}
-                <div className="flex-1">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full max-w-md h-auto object-cover shadow-lg"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="py-16 text-center">
+              <p className="text-lg text-foreground mb-2">
+                Working on cool things. Will be sharing them here soon.
+              </p>
+              <p className="text-muted-foreground">
+                Have questions? Feel free to{" "}
+                <a href="#contact" className="text-primary hover:underline">
+                  reach out
+                </a>
+                —I'd love to hear from you!
+              </p>
+            </div>
+          )}
         </div>
       </main>
 
