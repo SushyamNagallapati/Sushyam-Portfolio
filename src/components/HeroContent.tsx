@@ -16,10 +16,10 @@ const HeroContent = () => {
       {/* Buttons */}
       <div className="flex flex-wrap gap-4 mb-10">
         <Button variant="default" size="lg" className="rounded-full px-8">
-          RESUME
+          PROJECTS
         </Button>
         <Button variant="outline" size="lg" className="rounded-full px-8">
-          PROJECTS
+          RESUME
         </Button>
       </div>
 
