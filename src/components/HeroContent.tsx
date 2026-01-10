@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HeroContent = () => {
   return (
@@ -15,8 +16,8 @@ const HeroContent = () => {
 
       {/* Buttons */}
       <div className="flex flex-wrap gap-4 mb-10">
-        <Button variant="default" size="lg" className="rounded-full px-8">
-          PROJECTS
+        <Button variant="default" size="lg" className="rounded-full px-8" asChild>
+          <Link to="/projects">PROJECTS</Link>
         </Button>
         <Button variant="outline" size="lg" className="rounded-full px-8">
           RESUME
