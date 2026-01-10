@@ -1,7 +1,18 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
+
+type ProjectCategory = "Selected" | "AI/ML" | "Web/Mobile apps" | "Experiments" | "Design system components";
+
+const categories: ProjectCategory[] = [
+  "Selected",
+  "AI/ML",
+  "Web/Mobile apps",
+  "Experiments",
+  "Design system components",
+];
 
 const projects = [
   {
@@ -12,6 +23,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "#",
+    category: "Selected" as ProjectCategory,
   },
   {
     id: 2,
@@ -21,10 +33,17 @@ const projects = [
     image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "#",
+    category: "AI/ML" as ProjectCategory,
   },
 ];
 
 const Projects = () => {
+  const [activeCategory, setActiveCategory] = useState<ProjectCategory>("Selected");
+
+  const filteredProjects = projects.filter(
+    (project) => project.category === activeCategory
+  );
+
   return (
     <div className="min-h-screen bg-muted">
       <Header />
@@ -32,13 +51,30 @@ const Projects = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6 max-w-5xl">
           {/* Page Title */}
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-16">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-8">
             Projects
           </h1>
 
+          {/* Category Tabs */}
+          <div className="flex flex-wrap gap-2 mb-16">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-4 py-2 text-sm font-medium transition-colors rounded-full ${
+                  activeCategory === category
+                    ? "bg-foreground text-background"
+                    : "bg-transparent text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
           {/* Projects List */}
           <div className="space-y-24">
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <div
                 key={project.id}
                 className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16"
