@@ -10,23 +10,21 @@ const Index = () => {
 
       {/* Main Hero Section */}
       <main className="flex-1 pt-16">
-        <section className="min-h-[calc(100vh-180px)] flex items-center">
-          {/* Left Beige Panel */}
-          <div className="hidden lg:block fixed left-0 top-0 w-2/5 h-full bg-beige -z-10" />
+        <section className="min-h-[calc(100vh-180px)] flex items-center relative">
+          {/* Left Beige Panel - behind profile card only */}
+          <div className="hidden lg:block absolute left-0 top-0 w-[38%] h-full bg-beige" />
 
-          {/* Content Area */}
-          <div className="flex-1 flex items-center justify-center">
-            <div className="container mx-auto px-6 py-12">
-              <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
-                {/* Profile Card */}
-                <div className="w-full max-w-xs lg:max-w-sm">
-                  <ProfileCard />
-                </div>
+          {/* Content Area - left aligned, not centered */}
+          <div className="w-full">
+            <div className="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-12 px-6 lg:px-0">
+              {/* Profile Card - positioned at beige/white boundary */}
+              <div className="w-full max-w-xs lg:ml-[calc(38%-140px)]">
+                <ProfileCard />
+              </div>
 
-                {/* Hero Content */}
-                <div className="flex-1 max-w-lg">
-                  <HeroContent />
-                </div>
+              {/* Hero Content - close to card */}
+              <div className="max-w-md">
+                <HeroContent />
               </div>
             </div>
           </div>
