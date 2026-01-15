@@ -21,7 +21,7 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-2">
             <div className="w-3 h-3 bg-primary rounded-sm" />
             <span className="font-semibold text-lg">Sushyam Nagallapati</span>
-            <span className="text-muted-foreground text-sm hidden sm:inline">/ web apps, AI/ML works</span>
+            <span className="text-muted-foreground text-sm hidden sm:inline">/ Web Apps, AI/ML works</span>
           </Link>
 
           {/* Desktop Navigation */}
