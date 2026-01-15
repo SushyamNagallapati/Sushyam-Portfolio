@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Linkedin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-3 h-3 bg-primary rounded-sm" />
+            <img 
+              src={profilePhoto} 
+              alt="Sushyam Nagallapati" 
+              className="w-8 h-8 rounded-full object-cover border-2 border-primary/20"
+            />
             <span className="font-semibold text-lg">Sushyam Nagallapati</span>
             <span className="text-muted-foreground text-sm hidden sm:inline">/ Web Apps, AI/ML works</span>
           </Link>
