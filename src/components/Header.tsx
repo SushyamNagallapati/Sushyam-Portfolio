@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Linkedin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
     { label: "ABOUT ME", href: "/", active: location.pathname === "/" },
     { label: "RESUME", href: "#resume", active: false },
     { label: "PROJECTS", href: "/projects", active: location.pathname === "/projects" },
-    { label: "CONTACT", href: "#contact", active: false },
+    { label: "LINKEDIN", href: "https://www.linkedin.com/in/sushyamnagallapati", active: false, isExternal: true, icon: true },
   ];
 
   return (
@@ -35,6 +35,17 @@ const Header = () => {
                 >
                   {item.label}
                 </Link>
+              ) : item.isExternal ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link hover:text-primary transition-colors"
+                  aria-label={item.label}
+                >
+                  {item.icon ? <Linkedin className="w-5 h-5" /> : item.label}
+                </a>
               ) : (
                 <a
                   key={item.label}
@@ -71,6 +82,19 @@ const Header = () => {
                   >
                     {item.label}
                   </Link>
+                ) : item.isExternal ? (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="nav-link flex items-center gap-2 hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                    aria-label={item.label}
+                  >
+                    {item.icon ? <Linkedin className="w-5 h-5" /> : item.label}
+                    <span>{item.label}</span>
+                  </a>
                 ) : (
                   <a
                     key={item.label}
