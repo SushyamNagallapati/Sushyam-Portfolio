@@ -52,7 +52,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "https://github.com/SushyamNagallapati/path-planning-cnn/tree/master",
-    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
+    categories: ["AI/ML Experiments"] as ProjectCategory[],
   },
 ];
 
