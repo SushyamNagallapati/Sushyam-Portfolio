@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
             <div className="text-center">
               <p className="font-medium text-foreground">Write</p>
-              <p className="text-muted-foreground">info@mysite.com</p>
+              <p className="text-muted-foreground">s2nagall@uwaterloo.ca</p>
             </div>
             <div className="text-center">
               <p className="font-medium text-foreground">Follow</p>
