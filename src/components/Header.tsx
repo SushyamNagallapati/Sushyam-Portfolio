@@ -6,6 +6,7 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const isAboutPage = location.pathname === "/";
 
   const navItems = [
     { label: "ABOUT ME", href: "/", active: location.pathname === "/" },
@@ -20,12 +21,16 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img 
-              src={profilePhoto} 
-              alt="Sushyam Nagallapati" 
-              className="w-8 h-8 rounded-full object-cover border-2 border-primary/20"
-            />
-            <span className="font-semibold text-lg">Sushyam Nagallapati</span>
+            {!isAboutPage && (
+              <>
+                <img 
+                  src={profilePhoto} 
+                  alt="Sushyam Nagallapati" 
+                  className="w-8 h-8 rounded-full object-cover border-2 border-primary/20"
+                />
+                <span className="font-semibold text-lg">Sushyam Nagallapati</span>
+              </>
+            )}
             <span className="text-muted-foreground text-sm hidden sm:inline">/ Web Apps, AI/ML works</span>
           </Link>
 
