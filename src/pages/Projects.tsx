@@ -17,13 +17,13 @@ const categories: ProjectCategory[] = [
 const projects = [
   {
     id: 1,
-    name: "Project Name 01",
+    name: "Agentic AI Insurance Assistant",
     description:
-      "I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click \"Edit Text\" or double click me to add your own content and make changes to the font. I'm a great place for you to tell a story and let your users know a little more about you.",
+      "Designed and built a multi-agent AI assistant for the health insurance domain to help users retrieve claims, understand policy documents, and take action through natural language queries. The goal was to reduce manual claim lookups and improve accuracy in document-driven responses while operating within strict privacy and role-based constraints.",
     image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "#",
-    category: "Selected" as ProjectCategory,
+    categories: ["Selected", "AI/ML"] as ProjectCategory[],
   },
   {
     id: 2,
@@ -33,15 +33,15 @@ const projects = [
     image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "#",
-    category: "AI/ML" as ProjectCategory,
+    categories: ["AI/ML"] as ProjectCategory[],
   },
 ];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("Selected");
 
-  const filteredProjects = projects.filter(
-    (project) => project.category === activeCategory
+  const filteredProjects = projects.filter((project) =>
+    project.categories.includes(activeCategory)
   );
 
   return (
