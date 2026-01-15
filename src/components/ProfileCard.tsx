@@ -9,14 +9,14 @@ const ProfileCard = () => {
         <div className="w-36 h-36 rounded-full overflow-hidden mb-6 border-4 border-background shadow-md">
           <img
             src={profilePhoto}
-            alt="Sushyam"
+            alt="Sushyam Nagallapati"
             className="w-full h-full object-cover"
           />
         </div>
 
         {/* Name */}
         <h2 className="font-serif text-2xl font-bold text-center text-foreground">
-          Sushyam
+          Sushyam Nagallapati
         </h2>
 
         {/* Divider */}
