@@ -16,16 +16,6 @@ const categories: ProjectCategory[] = [
 const projects = [
   {
     id: 1,
-    name: "Agentic AI Insurance Assistant",
-    description:
-      "Designed and built a multi-agent AI assistant for the health insurance domain to help users retrieve claims, understand policy documents, and take action through natural language queries. The goal was to reduce manual claim lookups and improve accuracy in document-driven responses while operating within strict privacy and role-based constraints.",
-    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop",
-    viewMoreUrl: "#",
-    githubUrl: "https://github.com/SushyamNagallapati/Agentic-Financial-Claim-Assistant-MCP-RAG",
-    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
-  },
-  {
-    id: 2,
     name: "Local RAG Assistant with LLaMA 3.2",
     description:
       "Built a local-first Retrieval-Augmented Generation (RAG) assistant that allows users to ask natural language questions over their own PDF documents using an on-device LLM. The goal was to explore privacy-preserving, offline-capable AI workflows while maintaining strong retrieval accuracy and response grounding.",
@@ -35,17 +25,7 @@ const projects = [
     categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
   },
   {
-    id: 3,
-    name: "Autonomous Overtaking with SAC-MPC and Vision-Based Perception",
-    description:
-      "Designed and evaluated a full-stack autonomous driving system for opposite-lane overtaking on two-way roads, combining real-time perception, reinforcement learning, and model predictive control. The goal was to enable safe, human-like overtaking behavior under tight spatial and safety constraints using only onboard vision.",
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop",
-    viewMoreUrl: "#",
-    githubUrl: "#",
-    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
-  },
-  {
-    id: 4,
+    id: 2,
     name: "Path Planning with Classical, Learning-Based, and RL Methods",
     description:
       "Explored how classical planners, learning-based models, and reinforcement learning can be combined to improve path planning for mobile robots in obstacle-dense environments. The project evaluated when traditional algorithms break down, how far learning-based models can generalize, and whether RL can refine planned paths under realistic dynamics.",
