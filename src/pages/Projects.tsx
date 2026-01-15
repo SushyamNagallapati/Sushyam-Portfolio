@@ -142,7 +142,7 @@ const Projects = () => {
                 <a href="https://www.linkedin.com/in/sushyamnagallapati" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   reach out
                 </a>
-                —I'd love to hear from you!
+                . I'd love to hear from you!
               </p>
             </div>
           )}
