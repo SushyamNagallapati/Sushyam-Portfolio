@@ -22,7 +22,7 @@ const projects = [
       "Designed and built a multi-agent AI assistant for the health insurance domain to help users retrieve claims, understand policy documents, and take action through natural language queries. The goal was to reduce manual claim lookups and improve accuracy in document-driven responses while operating within strict privacy and role-based constraints.",
     image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/SushyamNagallapati/Agentic-Financial-Claim-Assistant-MCP-RAG",
     categories: ["Selected", "AI/ML"] as ProjectCategory[],
   },
   {
