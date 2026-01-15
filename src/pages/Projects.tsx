@@ -35,6 +35,16 @@ const projects = [
     githubUrl: "https://github.com/SushyamNagallapati/RAG",
     categories: ["Selected", "AI/ML"] as ProjectCategory[],
   },
+  {
+    id: 3,
+    name: "Autonomous Overtaking with SAC-MPC and Vision-Based Perception",
+    description:
+      "Designed and evaluated a full-stack autonomous driving system for opposite-lane overtaking on two-way roads, combining real-time perception, reinforcement learning, and model predictive control. The goal was to enable safe, human-like overtaking behavior under tight spatial and safety constraints using only onboard vision.",
+    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop",
+    viewMoreUrl: "#",
+    githubUrl: "#",
+    categories: ["Selected", "AI/ML"] as ProjectCategory[],
+  },
 ];
 
 const Projects = () => {
