@@ -32,7 +32,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "https://github.com/SushyamNagallapati/RAG",
-    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
+    categories: ["AI/ML Experiments"] as ProjectCategory[],
   },
   {
     id: 3,
