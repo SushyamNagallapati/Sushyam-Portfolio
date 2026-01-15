@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
             <div className="text-center">
               <p className="font-medium text-foreground">Write</p>
-              <p className="text-muted-foreground">s2nagall@uwaterloo.ca</p>
+              <a href="mailto:s2nagall@uwaterloo.ca" className="text-muted-foreground hover:text-foreground transition-colors">s2nagall@uwaterloo.ca</a>
             </div>
             <div className="text-center">
               <p className="font-medium text-foreground">Follow</p>
