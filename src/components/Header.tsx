@@ -20,7 +20,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-3 h-3 bg-primary rounded-sm" />
-            <span className="font-semibold text-lg">Sushyam</span>
+            <span className="font-semibold text-lg">Sushyam Nagallapati</span>
             <span className="text-muted-foreground text-sm hidden sm:inline">/ PROFESSIONAL</span>
           </Link>
 
