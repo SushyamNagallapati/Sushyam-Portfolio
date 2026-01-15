@@ -22,7 +22,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "https://github.com/SushyamNagallapati/Agentic-Financial-Claim-Assistant-MCP-RAG",
-    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
+    categories: ["Selected"] as ProjectCategory[],
   },
   {
     id: 2,
