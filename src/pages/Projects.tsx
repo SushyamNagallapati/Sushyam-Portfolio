@@ -27,13 +27,13 @@ const projects = [
   },
   {
     id: 2,
-    name: "Project Name 02",
+    name: "Local RAG Assistant with LLaMA 3.2",
     description:
-      "I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click \"Edit Text\" or double click me to add your own content and make changes to the font. I'm a great place for you to tell a story and let your users know a little more about you.",
+      "Built a local-first Retrieval-Augmented Generation (RAG) assistant that allows users to ask natural language questions over their own PDF documents using an on-device LLM. The goal was to explore privacy-preserving, offline-capable AI workflows while maintaining strong retrieval accuracy and response grounding.",
     image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
-    githubUrl: "#",
-    categories: ["AI/ML"] as ProjectCategory[],
+    githubUrl: "https://github.com/SushyamNagallapati/RAG",
+    categories: ["Selected", "AI/ML"] as ProjectCategory[],
   },
 ];
 
