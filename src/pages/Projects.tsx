@@ -34,6 +34,16 @@ const projects = [
     githubUrl: "#",
     categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
   },
+  {
+    id: 4,
+    name: "Path Planning with Classical, Learning-Based, and RL Methods",
+    description:
+      "Explored how classical planners, learning-based models, and reinforcement learning can be combined to improve path planning for mobile robots in obstacle-dense environments. The project evaluated when traditional algorithms break down, how far learning-based models can generalize, and whether RL can refine planned paths under realistic dynamics.",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+    viewMoreUrl: "#",
+    githubUrl: "https://github.com/SushyamNagallapati/path-planning-cnn/tree/master",
+    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
+  },
 ];
 
 const Projects = () => {
