@@ -4,13 +4,12 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
 
-type ProjectCategory = "Selected" | "AI/ML" | "Web/Mobile apps" | "Experiments" | "Design system components";
+type ProjectCategory = "Selected" | "AI/ML Experiments" | "Web/Mobile apps" | "Design system components";
 
 const categories: ProjectCategory[] = [
   "Selected",
-  "AI/ML",
+  "AI/ML Experiments",
   "Web/Mobile apps",
-  "Experiments",
   "Design system components",
 ];
 
@@ -23,7 +22,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "https://github.com/SushyamNagallapati/Agentic-Financial-Claim-Assistant-MCP-RAG",
-    categories: ["Selected", "AI/ML"] as ProjectCategory[],
+    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
   },
   {
     id: 2,
@@ -33,7 +32,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "https://github.com/SushyamNagallapati/RAG",
-    categories: ["Selected", "AI/ML"] as ProjectCategory[],
+    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
   },
   {
     id: 3,
@@ -43,7 +42,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "#",
-    categories: ["Selected", "AI/ML"] as ProjectCategory[],
+    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
   },
   {
     id: 4,
@@ -53,7 +52,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "https://github.com/SushyamNagallapati/path-planning-cnn/tree/master",
-    categories: ["Selected", "AI/ML"] as ProjectCategory[],
+    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
   },
 ];
 
