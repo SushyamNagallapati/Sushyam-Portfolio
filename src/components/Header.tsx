@@ -18,11 +18,11 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="w-3 h-3 bg-primary rounded-sm" />
             <span className="font-semibold text-lg">Sushyam</span>
             <span className="text-muted-foreground text-sm hidden sm:inline">/ PROFESSIONAL</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
