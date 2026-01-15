@@ -30,7 +30,7 @@ const projects = [
     description:
       "Built a local-first Retrieval-Augmented Generation (RAG) assistant that allows users to ask natural language questions over their own PDF documents using an on-device LLM. The goal was to explore privacy-preserving, offline-capable AI workflows while maintaining strong retrieval accuracy and response grounding.",
     image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop",
-    viewMoreUrl: "#",
+    viewMoreUrl: "",
     githubUrl: "https://github.com/SushyamNagallapati/RAG",
     categories: ["AI/ML Experiments"] as ProjectCategory[],
   },
@@ -50,7 +50,7 @@ const projects = [
     description:
       "Explored how classical planners, learning-based models, and reinforcement learning can be combined to improve path planning for mobile robots in obstacle-dense environments. The project evaluated when traditional algorithms break down, how far learning-based models can generalize, and whether RL can refine planned paths under realistic dynamics.",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
-    viewMoreUrl: "#",
+    viewMoreUrl: "https://drive.google.com/file/d/1NObQ4eHOOZXq_Eaq2_VeIma8n2_n4giv/view?usp=sharing",
     githubUrl: "https://github.com/SushyamNagallapati/path-planning-cnn/tree/master",
     categories: ["AI/ML Experiments"] as ProjectCategory[],
   },
@@ -108,9 +108,11 @@ const Projects = () => {
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-3">
-                      <Button variant="default" size="sm" className="rounded-full px-6" asChild>
-                        <a href={project.viewMoreUrl}>View more</a>
-                      </Button>
+                      {project.viewMoreUrl && (
+                        <Button variant="default" size="sm" className="rounded-full px-6" asChild>
+                          <a href={project.viewMoreUrl}>View more</a>
+                        </Button>
+                      )}
                       <Button variant="outline" size="sm" className="rounded-full px-6 gap-2" asChild>
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                           <Github className="w-4 h-4" />
