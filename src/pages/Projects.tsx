@@ -71,7 +71,7 @@ const Projects = () => {
       <main className="flex-1 pt-24 pb-16">
         <div className="container mx-auto px-6 max-w-5xl">
           {/* Page Title */}
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-8">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-8 cursor-default transition-all duration-300 hover:tracking-widest hover:text-primary">
             Projects
           </h1>
 
