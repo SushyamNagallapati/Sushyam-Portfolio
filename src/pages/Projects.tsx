@@ -42,7 +42,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop",
     viewMoreUrl: "#",
     githubUrl: "#",
-    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
+    categories: ["Selected"] as ProjectCategory[],
   },
   {
     id: 4,
