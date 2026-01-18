@@ -1,4 +1,4 @@
-import { Linkedin, Github } from "lucide-react";
+import { Linkedin, Github, Twitter } from "lucide-react";
 
 interface SocialIconsProps {
   className?: string;
@@ -13,6 +13,9 @@ const SocialIcons = ({ className = "", iconClassName = "social-icon" }: SocialIc
       </a>
       <a href="#" aria-label="GitHub">
         <Github className={iconClassName} />
+      </a>
+      <a href="https://x.com/SushyamR" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <Twitter className={iconClassName} />
       </a>
     </div>
   );
