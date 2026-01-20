@@ -14,9 +14,6 @@ const SocialIcons = ({ className = "", iconClassName = "social-icon" }: SocialIc
       <a href="#" aria-label="GitHub">
         <Github className={iconClassName} />
       </a>
-      <a href="https://x.com/SushyamR" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-        <Twitter className={iconClassName} />
-      </a>
     </div>
   );
 };
