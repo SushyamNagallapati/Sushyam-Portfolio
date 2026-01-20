@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Linkedin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,6 +62,7 @@ const Header = () => {
                 </a>
               )
             ))}
+            <ThemeToggle />
           </nav>
 
           {/* Mobile Menu Button */}
