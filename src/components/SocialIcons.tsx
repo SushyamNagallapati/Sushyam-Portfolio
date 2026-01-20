@@ -1,13 +1,13 @@
-import { Linkedin, Github, Twitter } from "lucide-react";
-
+import { Linkedin, Github } from "lucide-react";
 interface SocialIconsProps {
   className?: string;
   iconClassName?: string;
 }
-
-const SocialIcons = ({ className = "", iconClassName = "social-icon" }: SocialIconsProps) => {
-  return (
-    <div className={`flex items-center gap-4 ${className}`}>
+const SocialIcons = ({
+  className = "",
+  iconClassName = "social-icon"
+}: SocialIconsProps) => {
+  return <div className={`flex items-center gap-4 ${className}`}>
       <a href="https://www.linkedin.com/in/sushyamnagallapati" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <Linkedin className={iconClassName} />
       </a>
@@ -15,10 +15,8 @@ const SocialIcons = ({ className = "", iconClassName = "social-icon" }: SocialIc
         <Github className={iconClassName} />
       </a>
       <a href="https://x.com/SushyamR" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-        <Twitter className={iconClassName} />
+        
       </a>
-    </div>
-  );
+    </div>;
 };
-
 export default SocialIcons;
