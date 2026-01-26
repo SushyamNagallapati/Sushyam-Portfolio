@@ -11,8 +11,8 @@ const Index = () => {
       {/* Main Hero Section */}
       <main className="flex-1 pt-16">
         <section className="min-h-[calc(100vh-180px)] flex items-center relative">
-          {/* Left Beige Panel - extends to footer */}
-          <div className="hidden lg:block absolute left-0 top-0 w-[38%] h-[calc(100%+1px)] bg-beige" />
+          {/* Left Beige Panel - behind profile card only */}
+          <div className="hidden lg:block absolute left-0 top-0 w-[38%] h-full bg-beige" />
 
           {/* Content Area - left aligned, not centered */}
           <div className="w-full">
