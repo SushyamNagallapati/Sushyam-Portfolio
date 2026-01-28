@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const HeroContent = () => {
-  return (
-    <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
+  return <div className="animate-fade-in" style={{
+    animationDelay: "0.4s"
+  }}>
       {/* Main Heading */}
       <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4">
         Hello
@@ -26,15 +26,9 @@ const HeroContent = () => {
 
       {/* Bio Paragraphs */}
       <div className="space-y-4 text-muted-foreground max-w-md">
-        <p>
-          I am a graduate student in System Design Engineering, and I enjoy building practical software systems, especially where web applications and AI meet. I like tackling problems with messy information, unclear requirements, and solutions that need to work for real people.
-        </p>
-        <p>
-          Recently, I have been focused on developing AI-powered tools that utilize retrieval-based systems, chat interfaces, and data-driven workflows. I focus on making these tools reliable, easy to use, and able to deliver clear results.
-        </p>
+        <p>I am a graduate student in System Design Engineering who builds practical software systems at the intersection of web applications and AI. I enjoy working on problems with messy information, unclear requirements, and solutions that need to work for real people.</p>
+        <p>Recently, I’ve been focused on building AI-powered tools using retrieval-based systems, chat interfaces, and data-driven workflows. I care deeply about making these tools reliable, easy to use, and capable of delivering clear, trustworthy results.</p>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default HeroContent;
