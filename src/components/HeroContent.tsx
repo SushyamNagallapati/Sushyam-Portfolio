@@ -27,10 +27,10 @@ const HeroContent = () => {
       {/* Bio Paragraphs */}
       <div className="space-y-4 text-muted-foreground max-w-md">
         <p>
-          I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font.
+          I am a graduate student in System Design Engineering, and I enjoy building practical software systems, especially where web applications and AI meet. I like tackling problems with messy information, unclear requirements, and solutions that need to work for real people.
         </p>
         <p>
-          I'm a great place for you to tell a story and let your users know a little more about you.
+          Recently, I have been focused on developing AI-powered tools that utilize retrieval-based systems, chat interfaces, and data-driven workflows. I focus on making these tools reliable, easy to use, and able to deliver clear results.
         </p>
       </div>
     </div>
