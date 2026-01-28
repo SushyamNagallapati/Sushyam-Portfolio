@@ -19,7 +19,7 @@ const ProfileCard = () => {
         <div className="w-12 h-0.5 bg-primary mt-4 mb-4" />
 
         {/* Title */}
-        <p className="text-sm tracking-widest text-muted-foreground uppercase">PROFESSIONAL</p>
+        <p className="text-sm tracking-widest text-muted-foreground uppercase">SOFTWARE DEVELOPER</p>
       </div>
 
       {/* Social Icons */}
