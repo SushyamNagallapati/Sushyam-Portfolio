@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import ProfileCard from "@/components/ProfileCard";
 import HeroContent from "@/components/HeroContent";
-import SkillsSection from "@/components/SkillsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -30,8 +29,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        <SkillsSection />
       </main>
 
       <Footer />
