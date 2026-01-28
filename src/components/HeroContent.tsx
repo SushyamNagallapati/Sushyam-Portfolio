@@ -26,7 +26,7 @@ const HeroContent = () => {
 
       {/* Bio Paragraphs */}
       <div className="space-y-4 text-muted-foreground max-w-md">
-        <p>I am a graduate student in System Design Engineering who builds practical software systems at the intersection of web applications and AI. I enjoy working on problems with messy information, unclear requirements, and solutions that need to work for real people.</p>
+        <p>I am a System Design Engineering graduate student who builds practical software systems at the intersection of web applications and AI.</p>
         <p>Recently, I’ve been focused on building AI-powered tools using retrieval-based systems, chat interfaces, and data-driven workflows. I care deeply about making these tools reliable, easy to use, and capable of delivering clear, trustworthy results.</p>
       </div>
     </div>;
