@@ -25,6 +25,16 @@ const projects = [
     categories: ["Selected"] as ProjectCategory[],
   },
   {
+    id: 5,
+    name: "Custom ChatBot",
+    description:
+      "Designed and built a full-stack AI chatbot using a TypeScript and Express backend with a React-based chat interface. The system maintains conversation context, handles validation and errors, and integrates with OpenAI to generate responses. The project focuses on clean architecture, modular backend design, and essential chat UX patterns such as message styling, markdown support, typing indicators, and auto-scrolling to deliver a clear and usable chat experience.",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+    viewMoreUrl: "",
+    githubUrl: "https://github.com/SushyamNagallapati/Custom-ChatBot",
+    categories: ["Web/Mobile apps", "Selected"] as ProjectCategory[],
+  },
+  {
     id: 2,
     name: "Local RAG Assistant with LLaMA 3.2",
     description:
@@ -53,16 +63,6 @@ const projects = [
     viewMoreUrl: "https://drive.google.com/file/d/1NObQ4eHOOZXq_Eaq2_VeIma8n2_n4giv/view?usp=sharing",
     githubUrl: "https://github.com/SushyamNagallapati/path-planning-cnn/tree/master",
     categories: ["AI/ML Experiments"] as ProjectCategory[],
-  },
-  {
-    id: 5,
-    name: "Custom ChatBot",
-    description:
-      "Designed and built a full-stack AI chatbot using a TypeScript and Express backend with a React-based chat interface. The system maintains conversation context, handles validation and errors, and integrates with OpenAI to generate responses. The project focuses on clean architecture, modular backend design, and essential chat UX patterns such as message styling, markdown support, typing indicators, and auto-scrolling to deliver a clear and usable chat experience.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-    viewMoreUrl: "",
-    githubUrl: "https://github.com/SushyamNagallapati/Custom-ChatBot",
-    categories: ["Web/Mobile apps"] as ProjectCategory[],
   },
 ];
 
