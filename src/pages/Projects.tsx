@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
+import { Github, Play } from "lucide-react";
 
 type ProjectCategory = "Selected" | "AI/ML Experiments" | "Web/Mobile Apps" | "Design System Components";
 
@@ -63,6 +63,17 @@ const projects = [
     viewMoreUrl: "https://drive.google.com/file/d/1NObQ4eHOOZXq_Eaq2_VeIma8n2_n4giv/view?usp=sharing",
     githubUrl: "https://github.com/SushyamNagallapati/path-planning-cnn/tree/master",
     categories: ["AI/ML Experiments"] as ProjectCategory[],
+  },
+  {
+    id: 8,
+    name: "5 DOF Robotic Arm",
+    description:
+      "Built a 5-degree-of-freedom robotic arm for pick-and-place tasks using Arduino, servo motors, and Bluetooth control. The arm uses inverse kinematics to calculate joint angles and accurately reach target positions, allowing it to handle objects of different sizes and orientations. The project demonstrates hands-on experience with robotics, motion control, and embedded systems for basic automation use cases.",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+    viewMoreUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
+    videoUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
+    githubUrl: "",
+    categories: ["Design System Components"] as ProjectCategory[],
   },
   {
     id: 7,
@@ -141,6 +152,14 @@ const Projects = () => {
                       {project.viewMoreUrl && (
                         <Button variant="default" size="sm" className="rounded-full px-6" asChild>
                           <a href={project.viewMoreUrl}>View more</a>
+                        </Button>
+                      )}
+                      {"videoUrl" in project && (project as any).videoUrl && (
+                        <Button variant="outline" size="sm" className="rounded-full px-6 gap-2" asChild>
+                          <a href={(project as any).videoUrl} target="_blank" rel="noopener noreferrer">
+                            <Play className="w-4 h-4" />
+                            Video
+                          </a>
                         </Button>
                       )}
                       {project.githubUrl && (
