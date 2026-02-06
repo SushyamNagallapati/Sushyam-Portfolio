@@ -84,6 +84,16 @@ const projects = [
     githubUrl: "",
     categories: ["Design System Components"] as ProjectCategory[],
   },
+  {
+    id: 8,
+    name: "5 DOF Robotic Arm",
+    description:
+      "Built a 5-degree-of-freedom robotic arm for pick-and-place tasks using Arduino, servo motors, and Bluetooth control. The arm uses inverse kinematics to calculate joint angles and accurately reach target positions, allowing it to handle objects of different sizes and orientations. The project demonstrates hands-on experience with robotics, motion control, and embedded systems for basic automation use cases.",
+    image: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?w=600&h=400&fit=crop",
+    viewMoreUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
+    githubUrl: "",
+    categories: ["Design System Components"] as ProjectCategory[],
+  },
 ];
 
 const Projects = () => {
