@@ -91,7 +91,7 @@ const projects = [
       "Built a 5-degree-of-freedom robotic arm for pick-and-place tasks using Arduino, servo motors, and Bluetooth control. The arm uses inverse kinematics to calculate joint angles and accurately reach target positions, allowing it to handle objects of different sizes and orientations. The project demonstrates hands-on experience with robotics, motion control, and embedded systems for basic automation use cases.",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
     viewMoreUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
-    videoUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
+    videoUrl: "https://docs.google.com/videos/d/1_kb1BwpyCrv-dZ0lvJdkU0YRG1yVs3SdY_Vkv6-jXrY/edit?usp=sharing",
     githubUrl: "",
     categories: ["Design System Components"] as ProjectCategory[],
   },
