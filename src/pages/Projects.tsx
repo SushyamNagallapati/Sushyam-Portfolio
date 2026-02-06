@@ -65,17 +65,6 @@ const projects = [
     categories: ["AI/ML Experiments"] as ProjectCategory[],
   },
   {
-    id: 8,
-    name: "5 DOF Robotic Arm",
-    description:
-      "Built a 5-degree-of-freedom robotic arm for pick-and-place tasks using Arduino, servo motors, and Bluetooth control. The arm uses inverse kinematics to calculate joint angles and accurately reach target positions, allowing it to handle objects of different sizes and orientations. The project demonstrates hands-on experience with robotics, motion control, and embedded systems for basic automation use cases.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
-    viewMoreUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
-    videoUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
-    githubUrl: "",
-    categories: ["Design System Components"] as ProjectCategory[],
-  },
-  {
     id: 7,
     name: "IoT Based Control of Machining Process",
     description:
@@ -92,6 +81,17 @@ const projects = [
       "Built a system dynamics model to understand how patient flow, staff availability, and medical resources affect hospital performance. The model shows how high patient demand, staffing shortages, and limited equipment lead to delays, staff overload, and poorer patient outcomes, and how improving capacity and response time can significantly improve care under pressure.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
     viewMoreUrl: "https://drive.google.com/file/d/1lKpnkhD77BO0G6pk7cRgAiI_H3At8DKT/view?usp=sharing",
+    githubUrl: "",
+    categories: ["Design System Components"] as ProjectCategory[],
+  },
+  {
+    id: 8,
+    name: "5 DOF Robotic Arm",
+    description:
+      "Built a 5-degree-of-freedom robotic arm for pick-and-place tasks using Arduino, servo motors, and Bluetooth control. The arm uses inverse kinematics to calculate joint angles and accurately reach target positions, allowing it to handle objects of different sizes and orientations. The project demonstrates hands-on experience with robotics, motion control, and embedded systems for basic automation use cases.",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+    viewMoreUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
+    videoUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
     githubUrl: "",
     categories: ["Design System Components"] as ProjectCategory[],
   },
