@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm">
             <div className="text-center">
               <p className="font-medium text-foreground">Call</p>
-              <p className="text-muted-foreground">226 9756863</p>
+              <a href="tel:2269756863" className="text-muted-foreground hover:text-foreground transition-colors">226 9756863</a>
             </div>
             <div className="text-center">
               <p className="font-medium text-foreground">Write</p>
