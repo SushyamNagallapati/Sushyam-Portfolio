@@ -65,16 +65,6 @@ const projects = [
     categories: ["AI/ML Experiments"] as ProjectCategory[],
   },
   {
-    id: 6,
-    name: "Healthcare System Modeling",
-    description:
-      "Built a system dynamics model to understand how patient flow, staff availability, and medical resources affect hospital performance. The model shows how high patient demand, staffing shortages, and limited equipment lead to delays, staff overload, and poorer patient outcomes, and how improving capacity and response time can significantly improve care under pressure.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
-    viewMoreUrl: "https://drive.google.com/file/d/1lKpnkhD77BO0G6pk7cRgAiI_H3At8DKT/view?usp=sharing",
-    githubUrl: "",
-    categories: ["Design System Components"] as ProjectCategory[],
-  },
-  {
     id: 7,
     name: "IoT Based Control of Machining Process",
     description:
@@ -82,6 +72,16 @@ const projects = [
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop",
     viewMoreUrl: "https://drive.google.com/file/d/1l86K94k6X1TRprfh9AVbgrFCd-S3wJwT/view?usp=sharing",
     githubUrl: "https://github.com/SushyamNagallapati/IOT-BASED-CONTROL-OF-MACHINING-PROCESS-USING-PLC-AND-ESP32",
+    categories: ["Design System Components"] as ProjectCategory[],
+  },
+  {
+    id: 6,
+    name: "Healthcare System Modeling",
+    description:
+      "Built a system dynamics model to understand how patient flow, staff availability, and medical resources affect hospital performance. The model shows how high patient demand, staffing shortages, and limited equipment lead to delays, staff overload, and poorer patient outcomes, and how improving capacity and response time can significantly improve care under pressure.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+    viewMoreUrl: "https://drive.google.com/file/d/1lKpnkhD77BO0G6pk7cRgAiI_H3At8DKT/view?usp=sharing",
+    githubUrl: "",
     categories: ["Design System Components"] as ProjectCategory[],
   },
 ];
