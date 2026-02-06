@@ -65,6 +65,16 @@ const projects = [
     categories: ["AI/ML Experiments"] as ProjectCategory[],
   },
   {
+    id: 7,
+    name: "IoT Based Control of Machining Process",
+    description:
+      "Built an IoT-enabled machining control system using a PLC and ESP32 to remotely monitor and control drilling operations. The system replaces manual and wired control with a mobile-based interface, improving safety, reducing downtime, and enabling real-time operation control through wireless communication.",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop",
+    viewMoreUrl: "https://drive.google.com/file/d/1l86K94k6X1TRprfh9AVbgrFCd-S3wJwT/view?usp=sharing",
+    githubUrl: "https://github.com/SushyamNagallapati/IOT-BASED-CONTROL-OF-MACHINING-PROCESS-USING-PLC-AND-ESP32",
+    categories: ["Design System Components"] as ProjectCategory[],
+  },
+  {
     id: 8,
     name: "5 DOF Robotic Arm",
     description:
@@ -73,16 +83,6 @@ const projects = [
     viewMoreUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
     videoUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
     githubUrl: "",
-    categories: ["Design System Components"] as ProjectCategory[],
-  },
-  {
-    id: 7,
-    name: "IoT Based Control of Machining Process",
-    description:
-      "Built an IoT-enabled machining control system using a PLC and ESP32 to remotely monitor and control drilling operations. The system replaces manual and wired control with a mobile-based interface, improving safety, reducing downtime, and enabling real-time operation control through wireless communication.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop",
-    viewMoreUrl: "https://drive.google.com/file/d/1l86K94k6X1TRprfh9AVbgrFCd-S3wJwT/view?usp=sharing",
-    githubUrl: "https://github.com/SushyamNagallapati/IOT-BASED-CONTROL-OF-MACHINING-PROCESS-USING-PLC-AND-ESP32",
     categories: ["Design System Components"] as ProjectCategory[],
   },
   {
