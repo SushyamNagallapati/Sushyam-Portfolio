@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
           <div className="text-sm text-muted-foreground text-center md:text-left">
-            <p>© 2025 by Sushyam Nagallapati</p>
+            <p>© {new Date().getFullYear()} by Sushyam Nagallapati</p>
           </div>
 
           {/* Contact Info */}
