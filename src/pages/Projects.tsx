@@ -64,6 +64,16 @@ const projects = [
     githubUrl: "https://github.com/SushyamNagallapati/path-planning-cnn/tree/master",
     categories: ["AI/ML Experiments"] as ProjectCategory[],
   },
+  {
+    id: 6,
+    name: "Healthcare System Modeling",
+    description:
+      "Built a system dynamics model to understand how patient flow, staff availability, and medical resources affect hospital performance. The model shows how high patient demand, staffing shortages, and limited equipment lead to delays, staff overload, and poorer patient outcomes, and how improving capacity and response time can significantly improve care under pressure.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+    viewMoreUrl: "https://drive.google.com/file/d/1lKpnkhD77BO0G6pk7cRgAiI_H3At8DKT/view?usp=sharing",
+    githubUrl: "",
+    categories: ["Design system components"] as ProjectCategory[],
+  },
 ];
 
 const Projects = () => {
@@ -123,12 +133,14 @@ const Projects = () => {
                           <a href={project.viewMoreUrl}>View more</a>
                         </Button>
                       )}
-                      <Button variant="outline" size="sm" className="rounded-full px-6 gap-2" asChild>
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github className="w-4 h-4" />
-                          Open in Github
-                        </a>
-                      </Button>
+                      {project.githubUrl && (
+                        <Button variant="outline" size="sm" className="rounded-full px-6 gap-2" asChild>
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4" />
+                            Open in Github
+                          </a>
+                        </Button>
+                      )}
                     </div>
                   </div>
 
