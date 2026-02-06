@@ -4,13 +4,13 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
 
-type ProjectCategory = "Selected" | "AI/ML Experiments" | "Web/Mobile apps" | "Design system components";
+type ProjectCategory = "Selected" | "AI/ML Experiments" | "Web/Mobile Apps" | "Design System Components";
 
 const categories: ProjectCategory[] = [
   "Selected",
   "AI/ML Experiments",
-  "Web/Mobile apps",
-  "Design system components",
+  "Web/Mobile Apps",
+  "Design System Components",
 ];
 
 const projects = [
@@ -32,7 +32,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
     viewMoreUrl: "",
     githubUrl: "https://github.com/SushyamNagallapati/Custom-ChatBot",
-    categories: ["Web/Mobile apps", "Selected"] as ProjectCategory[],
+    categories: ["Web/Mobile Apps", "Selected"] as ProjectCategory[],
   },
   {
     id: 2,
@@ -72,7 +72,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
     viewMoreUrl: "https://drive.google.com/file/d/1lKpnkhD77BO0G6pk7cRgAiI_H3At8DKT/view?usp=sharing",
     githubUrl: "",
-    categories: ["Design system components"] as ProjectCategory[],
+    categories: ["Design System Components"] as ProjectCategory[],
   },
 ];
 
