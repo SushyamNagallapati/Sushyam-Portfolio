@@ -61,7 +61,7 @@ const projects = [
       "Designed and built a full-stack AI chatbot using a TypeScript and Express backend with a React-based chat interface. The system maintains conversation context, handles validation and errors, and integrates with OpenAI to generate responses. The project focuses on clean architecture, modular backend design, and essential chat UX patterns such as message styling, markdown support, typing indicators, and auto-scrolling to deliver a clear and usable chat experience.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
     viewMoreUrl: "",
-    githubUrl: "#",
+    githubUrl: "https://github.com/SushyamNagallapati/Custom-ChatBot",
     categories: ["Web/Mobile apps"] as ProjectCategory[],
   },
 ];
