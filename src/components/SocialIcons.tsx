@@ -7,14 +7,30 @@ interface SocialIconsProps {
 
 const SocialIcons = ({ className = "", iconClassName = "social-icon" }: SocialIconsProps) => {
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
-      <a href="https://www.linkedin.com/in/sushyamnagallapati" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+    <div className={`flex items-center gap-5 ${className}`}>
+      <a
+        href="https://www.linkedin.com/in/sushyamnagallapati"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        className="hover:scale-110 transition-transform duration-300"
+      >
         <Linkedin className={iconClassName} />
       </a>
-      <a href="#" aria-label="GitHub">
+      <a
+        href="#"
+        aria-label="GitHub"
+        className="hover:scale-110 transition-transform duration-300"
+      >
         <Github className={iconClassName} />
       </a>
-      <a href="https://x.com/SushyamR" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+      <a
+        href="https://x.com/SushyamR"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Twitter"
+        className="hover:scale-110 transition-transform duration-300"
+      >
         <Twitter className={iconClassName} />
       </a>
     </div>
