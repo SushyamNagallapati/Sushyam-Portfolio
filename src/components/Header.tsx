@@ -1,146 +1,141 @@
-import { useState } from "react";
-import { Menu, X, Linkedin } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const navItems = [
-    { label: "About", href: "/", active: location.pathname === "/" },
-    { label: "Resume", href: "#resume", active: false },
+    { label: "About", href: "/#about", active: false },
+    { label: "Resume", href: "/public/resume.pdf", active: false, isExternal: true },
     { label: "Projects", href: "/projects", active: location.pathname === "/projects" },
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/sushyamnagallapati",
-      active: false,
-      isExternal: true,
-      icon: true,
-    },
   ];
 
+  const linkClass = (active: boolean) =>
+    `text-sm font-medium transition-colors duration-150 pb-0.5 ${
+      active
+        ? "text-[var(--pg-text-primary)] border-b-2 border-[var(--pg-accent)]"
+        : "text-[var(--pg-text-muted)] hover:text-[var(--pg-accent)]"
+    }`;
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      {/* Glass panel */}
-      <div className="mx-4 mt-3 rounded-2xl bg-background/60 backdrop-blur-xl border border-border/40 shadow-lg shadow-black/10">
-        <div className="px-5 h-14 flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="relative">
-              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-br from-primary/60 to-indigo-500/40 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <img
-                src={profilePhoto}
-                alt="Sushyam Nagallapati"
-                className="relative w-8 h-8 rounded-full object-cover border-2 border-border/60 group-hover:border-primary/50 transition-all duration-300"
-              />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="font-semibold text-sm tracking-tight text-foreground">
-                Sushyam Nagallapati
-              </span>
-              <span className="text-muted-foreground text-[10px] tracking-wide hidden sm:block">
-                Web · AI/ML Systems
-              </span>
-            </div>
-          </Link>
+    <header
+      style={{
+        backgroundColor: "var(--pg-bg)",
+        borderBottomColor: "var(--pg-border)",
+        boxShadow: scrolled
+          ? "0 1px 12px rgba(0,0,0,0.08)"
+          : "none",
+      }}
+      className="sticky top-0 z-50 h-16 w-full bg-opacity-80 backdrop-blur-md border-b transition-shadow duration-200 dark:[box-shadow:0_1px_12px_rgba(0,0,0,0.4)]"
+    >
+      <div className="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
+        {/* Left — logo */}
+        <Link to="/" className="flex items-center gap-2.5">
+          <img
+            src={profilePhoto}
+            alt="Sushyam Nagallapati"
+            className="w-7 h-7 rounded-full object-cover"
+            style={{ border: "2px solid var(--pg-border)" }}
+          />
+          <div className="flex flex-col leading-none">
+            <span className="font-semibold text-sm" style={{ color: "var(--pg-text-primary)" }}>
+              Sushyam Nagallapati
+            </span>
+            <span className="text-xs hidden sm:block" style={{ color: "var(--pg-text-muted)" }}>
+              Web · AI/ML Systems
+            </span>
+          </div>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
-            {navItems.map((item) =>
-              item.href.startsWith("/") ? (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  className={`nav-link-pill ${item.active ? "nav-link-pill-active" : ""}`}
-                >
-                  {item.label}
-                </Link>
-              ) : item.isExternal ? (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="nav-link-pill"
-                  aria-label={item.label}
-                >
-                  {item.icon ? <Linkedin className="w-4 h-4" /> : item.label}
-                </a>
-              ) : (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className={`nav-link-pill ${item.active ? "nav-link-pill-active" : ""}`}
-                >
-                  {item.label}
-                </a>
-              )
-            )}
-            <div className="ml-2 pl-2 border-l border-border/40">
-              <ThemeToggle />
-            </div>
-          </nav>
+        {/* Right — desktop nav */}
+        <nav className="hidden md:flex items-center gap-6">
+          {navItems.map((item) =>
+            item.isExternal ? (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass(item.active)}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link key={item.label} to={item.href} className={linkClass(item.active)}>
+                {item.label}
+              </Link>
+            )
+          )}
+          <ThemeToggle />
+        </nav>
 
-          {/* Mobile Menu Button */}
+        {/* Mobile — toggle */}
+        <div className="md:hidden flex items-center gap-3">
+          <ThemeToggle />
           <button
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors duration-300 rounded-lg hover:bg-primary/10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
+            className="p-1.5 rounded-md transition-colors duration-150"
+            style={{ color: "var(--pg-text-muted)" }}
           >
             {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
-            isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <nav className="px-5 pb-4 border-t border-border/30">
-            <div className="flex flex-col gap-1 pt-3">
-              {navItems.map((item) =>
-                item.href.startsWith("/") ? (
-                  <Link
-                    key={item.label}
-                    to={item.href}
-                    className={`nav-link-pill ${item.active ? "nav-link-pill-active" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ) : item.isExternal ? (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="nav-link-pill flex items-center gap-2"
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-label={item.label}
-                  >
-                    {item.icon && <Linkedin className="w-4 h-4" />}
-                    <span>{item.label}</span>
-                  </a>
-                ) : (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className={`nav-link-pill ${item.active ? "nav-link-pill-active" : ""}`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                )
-              )}
-              <div className="pt-2 pl-1">
-                <ThemeToggle />
-              </div>
-            </div>
-          </nav>
-        </div>
+      {/* Mobile nav panel */}
+      <div
+        className="md:hidden overflow-hidden transition-all duration-300 ease-out"
+        style={{
+          maxHeight: isMenuOpen ? "200px" : "0",
+          backgroundColor: "var(--pg-bg)",
+          borderBottom: isMenuOpen ? `1px solid var(--pg-border)` : "none",
+        }}
+      >
+        <nav className="px-6 pb-4 flex flex-col gap-0">
+          {navItems.map((item) =>
+            item.isExternal ? (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className="py-4 text-base font-medium border-b transition-colors duration-150"
+                style={{
+                  color: "var(--pg-text-muted)",
+                  borderBottomColor: "var(--pg-border)",
+                }}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.label}
+                to={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="py-4 text-base font-medium border-b transition-colors duration-150"
+                style={{
+                  color: item.active ? "var(--pg-accent)" : "var(--pg-text-muted)",
+                  borderBottomColor: "var(--pg-border)",
+                }}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
+        </nav>
       </div>
     </header>
   );
