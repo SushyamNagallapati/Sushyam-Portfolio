@@ -2,7 +2,7 @@ import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border/60 py-8">
+    <footer className="fixed bottom-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-t border-border/50 py-4 transition-all duration-300">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
