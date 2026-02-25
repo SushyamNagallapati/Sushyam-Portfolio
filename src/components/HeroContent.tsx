@@ -31,7 +31,7 @@ const HeroContent = () => {
         className="pointer-events-none absolute inset-0 bg-grid-pattern opacity-[0.03] dark:opacity-[0.06]"
       />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-center gap-16 text-center lg:text-left">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col items-center justify-center gap-16 text-center">
         {/* Profile Card */}
         <div className="flex-shrink-0 animate-fade-in" style={{ animationDelay: "0.1s", opacity: 0 }}>
           <div className="relative group">
@@ -57,7 +57,7 @@ const HeroContent = () => {
         </div>
 
         {/* Text Content */}
-        <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start">
+        <div className="flex-1 text-center flex flex-col items-center">
           {/* Eyebrow */}
           <p
             className="text-sm tracking-[0.3em] text-primary/80 uppercase font-medium mb-4 animate-fade-in"
@@ -95,7 +95,7 @@ const HeroContent = () => {
 
           {/* CTA Buttons */}
           <div
-            className="flex flex-wrap gap-3 justify-center lg:justify-start mb-10 animate-fade-in"
+            className="flex flex-wrap gap-3 justify-center mb-10 animate-fade-in"
             style={{ animationDelay: "0.55s", opacity: 0 }}
           >
             <Button
