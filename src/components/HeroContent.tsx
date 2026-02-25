@@ -14,7 +14,7 @@ const HeroContent = () => {
   const typedText = useTypingAnimation(roles);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden bg-background">
       {/* Animated gradient blob */}
       <div
         aria-hidden
