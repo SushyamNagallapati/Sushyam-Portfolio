@@ -2,15 +2,6 @@ import Header from "@/components/Header";
 import ProfileCard from "@/components/ProfileCard";
 import HeroContent from "@/components/HeroContent";
 import Footer from "@/components/Footer";
-import { IconCloud } from "@/components/ui/interactive-icon-cloud";
-
-const iconSlugs = [
-  "typescript", "javascript", "python", "react", "tensorflow",
-  "pytorch", "html5", "css3", "nodedotjs", "postgresql",
-  "firebase", "docker", "git", "github", "amazonwebservices",
-  "figma", "tailwindcss", "arduino", "linux", "opencv",
-  "pandas", "numpy", "scikitlearn", "flask", "mongodb",
-];
 
 const Index = () => {
   return (
@@ -20,12 +11,8 @@ const Index = () => {
       {/* Main Hero Section */}
       <main className="flex-1 pt-16">
         <section className="min-h-[calc(100vh-64px)] flex items-center relative overflow-hidden">
-          {/* Left Panel with Icon Cloud */}
-          <div className="hidden lg:flex absolute left-0 top-0 w-[38%] h-full bg-beige items-center justify-center">
-            <div className="w-full max-w-[320px] opacity-70">
-              <IconCloud iconSlugs={iconSlugs} />
-            </div>
-          </div>
+          {/* Left Panel */}
+          <div className="hidden lg:block absolute left-0 top-0 w-[38%] h-full bg-beige" />
 
           {/* Content Area */}
           <div className="w-full relative z-10">
