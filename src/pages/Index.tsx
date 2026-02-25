@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import ProfileCard from "@/components/ProfileCard";
 import HeroContent from "@/components/HeroContent";
 import Footer from "@/components/Footer";
+import { IconCloud } from "@/components/ui/interactive-icon-cloud";
 
 const Index = () => {
   return (
@@ -11,8 +12,40 @@ const Index = () => {
       {/* Main Hero Section */}
       <main className="flex-1 pt-16">
         <section className="min-h-[calc(100vh-180px)] flex items-center relative">
-          {/* Left Beige Panel - behind profile card only */}
-          <div className="hidden lg:block absolute left-0 top-0 w-[38%] h-full bg-beige" />
+          {/* Left Beige Panel with Icon Cloud */}
+          <div className="hidden lg:flex absolute left-0 top-0 w-[38%] h-full bg-beige items-center justify-center overflow-hidden">
+            <div className="w-full max-w-sm opacity-80">
+              <IconCloud
+                iconSlugs={[
+                  "typescript",
+                  "javascript",
+                  "python",
+                  "react",
+                  "tensorflow",
+                  "pytorch",
+                  "html5",
+                  "css3",
+                  "nodedotjs",
+                  "postgresql",
+                  "firebase",
+                  "docker",
+                  "git",
+                  "github",
+                  "amazonwebservices",
+                  "figma",
+                  "tailwindcss",
+                  "arduino",
+                  "linux",
+                  "opencv",
+                  "pandas",
+                  "numpy",
+                  "scikitlearn",
+                  "flask",
+                  "mongodb",
+                ]}
+              />
+            </div>
+          </div>
 
           {/* Content Area - left aligned, not centered */}
           <div className="w-full">
