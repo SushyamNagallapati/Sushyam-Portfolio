@@ -108,7 +108,7 @@ const Projects = () => {
     <div className="min-h-screen flex flex-col bg-muted">
       <Header />
       
-      <main className="flex-1 pt-24 pb-16">
+      <main className="flex-1 pt-24 pb-24">
         <div className="container mx-auto px-6 max-w-5xl">
           {/* Page Title */}
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-8">

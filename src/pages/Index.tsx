@@ -9,7 +9,7 @@ const Index = () => {
       <Header />
 
       {/* Main Hero Section */}
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-16 pb-20">
         <section className="min-h-[calc(100vh-64px)] flex items-center relative overflow-hidden">
           {/* Left Panel */}
           <div className="hidden lg:block absolute left-0 top-0 w-[38%] h-full bg-beige" />
