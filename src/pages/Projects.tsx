@@ -184,7 +184,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
             <Button variant="default" size="sm" className="rounded-full px-4 text-xs gap-1.5 shadow-sm shadow-primary/20 hover:shadow-md hover:shadow-primary/30 transition-all" asChild>
               <a href={project.viewMoreUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-3 h-3" />
-                Live Demo
+                View more
               </a>
             </Button>
           )}
