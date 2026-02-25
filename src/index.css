@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,49 +6,46 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    /* ── Semantic design tokens (hex) ── */
+    --pg-bg:           #ffffff;
+    --pg-bg-subtle:    #f8fafc;
+    --pg-surface:      #f1f5f9;
+    --pg-border:       #e2e8f0;
+    --pg-text-primary: #0f172a;
+    --pg-text-muted:   #64748b;
+    --pg-accent:       #4f46e5;
+    --pg-accent-hover: #4338ca;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 10%;
+    /* ── shadcn HSL tokens ── */
+    --background:  0 0% 100%;
+    --foreground:  222 47% 11%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --card:              0 0% 100%;
+    --card-foreground:   222 47% 11%;
 
-    --primary: 220 90% 56%;
+    --popover:           0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary:           239 84% 59%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 25% 88%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary:         214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted:             214 32% 95%;
+    --muted-foreground:  215 16% 47%;
 
-    --accent: 30 25% 88%;
-    --accent-foreground: 0 0% 10%;
+    --accent:            214 32% 91%;
+    --accent-foreground: 222 47% 11%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive:       0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 92%;
-    --input: 0 0% 90%;
-    --ring: 220 90% 56%;
+    --border:  214 32% 91%;
+    --input:   214 32% 91%;
+    --ring:    239 84% 59%;
 
     --radius: 0.5rem;
-
-    /* Custom portfolio colors */
-    --beige: 35 30% 92%;
-    --navy: 220 20% 20%;
-    
-    /* Typography */
-    --font-serif: 'Playfair Display', Georgia, serif;
-    --font-sans: 'Inter', system-ui, sans-serif;
-
-    /* Neobrutalism tokens */
-    --nb-border: 0 0% 0%;
-    --box-shadow-x: 4px;
-    --box-shadow-y: 4px;
-    --shadow: var(--box-shadow-x) var(--box-shadow-y) 0px 0px hsl(var(--nb-border));
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -61,36 +58,44 @@
   }
 
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
+    /* ── Semantic design tokens (hex) ── */
+    --pg-bg:           #0a0a0f;
+    --pg-bg-subtle:    #0f0f17;
+    --pg-surface:      #13131e;
+    --pg-border:       #1e1e30;
+    --pg-text-primary: #f1f5f9;
+    --pg-text-muted:   #94a3b8;
+    --pg-accent:       #818cf8;
+    --pg-accent-hover: #a5b4fc;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    /* ── shadcn HSL tokens ── */
+    --background:  240 10% 4%;
+    --foreground:  210 40% 96%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 95%;
+    --card:              240 10% 7%;
+    --card-foreground:   210 40% 96%;
 
-    --primary: 220 90% 56%;
-    --primary-foreground: 0 0% 100%;
+    --popover:           240 10% 4%;
+    --popover-foreground: 210 40% 96%;
 
-    --secondary: 30 15% 20%;
-    --secondary-foreground: 0 0% 95%;
+    --primary:           234 89% 74%;
+    --primary-foreground: 240 10% 4%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --secondary:         240 5% 15%;
+    --secondary-foreground: 210 40% 96%;
 
-    --accent: 30 15% 20%;
-    --accent-foreground: 0 0% 95%;
+    --muted:             240 5% 15%;
+    --muted-foreground:  215 20% 65%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 95%;
+    --accent:            240 5% 15%;
+    --accent-foreground: 210 40% 96%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 20%;
-    --ring: 220 90% 56%;
-    
-    --beige: 220 10% 10%;
-    --navy: 220 20% 90%;
+    --destructive:       0 63% 31%;
+    --destructive-foreground: 210 40% 96%;
+
+    --border:  240 6% 18%;
+    --input:   240 6% 18%;
+    --ring:    234 89% 74%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -116,13 +121,14 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: var(--font-sans);
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
     letter-spacing: -0.011em;
   }
 
-  h1, h2, h3 {
-    font-family: var(--font-serif);
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     letter-spacing: -0.02em;
   }
 
@@ -133,78 +139,62 @@
 }
 
 @layer components {
-  .nav-link {
-    @apply text-sm tracking-wide text-muted-foreground hover:text-foreground transition-all duration-300 ease-out;
-  }
-  
-  .nav-link-active {
-    @apply text-primary;
+  /* ── Dot-Grid Pattern ── */
+  .dot-grid {
+    background-image: radial-gradient(circle, var(--pg-border) 1px, transparent 1px);
+    background-size: 28px 28px;
   }
 
-  /* Pill-style nav links with animated underline */
-  .nav-link-pill {
-    @apply relative text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-1.5 rounded-lg transition-all duration-200 ease-out;
+  /* ── Scroll Reveal ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
-  .nav-link-pill::after {
-    content: '';
-    @apply absolute bottom-0.5 left-3 right-3 h-[2px] rounded-full bg-primary scale-x-0 origin-left transition-transform duration-300 ease-out;
-  }
-  .nav-link-pill:hover::after {
-    @apply scale-x-100;
-  }
-  .nav-link-pill-active {
-    @apply text-primary;
-    background-color: hsl(var(--primary) / 0.08);
-  }
-  .nav-link-pill-active::after {
-    @apply scale-x-100;
-  }
-  
-  .social-icon {
-    @apply w-5 h-5 text-foreground hover:text-primary transition-all duration-300 ease-out cursor-pointer;
-  }
-
-  /* Animated gradient blobs */
-  .blob {
-    @apply absolute rounded-full mix-blend-normal filter blur-3xl opacity-20 dark:opacity-10 pointer-events-none;
-    animation: blob-float 12s ease-in-out infinite;
-  }
-  .blob-1 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, hsl(220 90% 56% / 0.8), hsl(240 80% 60% / 0.3));
-    top: -20%;
-    left: -10%;
-    animation-delay: 0s;
-  }
-  .blob-2 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, hsl(210 80% 65% / 0.7), hsl(220 90% 56% / 0.2));
-    bottom: -10%;
-    right: -5%;
-    animation-delay: -4s;
-  }
-  .blob-3 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, hsl(230 70% 70% / 0.6), transparent);
-    top: 40%;
-    left: 40%;
-    animation-delay: -8s;
-  }
-
-  .bg-grid-pattern {
-    background-image:
-      linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px);
-    background-size: 40px 40px;
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes blob-float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(30px, -20px) scale(1.05); }
-  50% { transform: translate(-20px, 30px) scale(0.97); }
-  75% { transform: translate(20px, 10px) scale(1.03); }
+/* ── Hero Fade-Up Keyframe ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease-out forwards;
+}
+
+/* ── Blink cursor ── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ── Accordion animations ── */
+@keyframes accordion-down {
+  from { height: 0; }
+  to   { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to   { height: 0; }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
