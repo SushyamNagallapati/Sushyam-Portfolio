@@ -150,14 +150,11 @@ const Projects = () => {
                     </p>
                     <div className="flex flex-wrap gap-3">
                       {project.viewMoreUrl && (
-                        <a
-                          href={project.viewMoreUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center h-9 px-6 text-sm font-medium rounded-base bg-primary text-primary-foreground border-2 border-nb-border shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all"
-                        >
-                          View more
-                        </a>
+                        <Button variant="default" size="sm" className="rounded-full px-6" asChild>
+                          <a href={project.viewMoreUrl} target="_blank" rel="noopener noreferrer">
+                            View more
+                          </a>
+                        </Button>
                       )}
                       {"videoUrl" in project && (project as any).videoUrl && (
                         <Button variant="outline" size="sm" className="rounded-full px-6 gap-2" asChild>
@@ -168,15 +165,12 @@ const Projects = () => {
                         </Button>
                       )}
                       {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center gap-2 h-9 px-6 text-sm font-medium rounded-base bg-primary text-primary-foreground border-2 border-nb-border shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all"
-                        >
-                          <Github className="w-4 h-4" />
-                          Open in Github
-                        </a>
+                        <Button variant="outline" size="sm" className="rounded-full px-6 gap-2" asChild>
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4" />
+                            Open in Github
+                          </a>
+                        </Button>
                       )}
                     </div>
                   </div>
