@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +9,7 @@
     --background: 0 0% 100%;
     --foreground: 0 0% 10%;
 
-    --card: 0 0% 96%;
+    --card: 0 0% 98%;
     --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
@@ -30,14 +30,14 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 90%;
+    --border: 0 0% 92%;
     --input: 0 0% 90%;
     --ring: 220 90% 56%;
 
     --radius: 0.5rem;
 
     /* Custom portfolio colors */
-    --beige: 30 25% 88%;
+    --beige: 35 30% 92%;
     --navy: 220 20% 20%;
     
     /* Typography */
@@ -58,7 +58,7 @@
     --background: 0 0% 5%;
     --foreground: 0 0% 95%;
 
-    --card: 0 0% 10%;
+    --card: 0 0% 8%;
     --card-foreground: 0 0% 95%;
 
     --popover: 0 0% 5%;
@@ -71,7 +71,7 @@
     --secondary-foreground: 0 0% 95%;
 
     --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted-foreground: 0 0% 60%;
 
     --accent: 30 15% 20%;
     --accent-foreground: 0 0% 95%;
@@ -79,11 +79,11 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 0 0% 20%;
+    --border: 0 0% 15%;
     --input: 0 0% 20%;
     --ring: 220 90% 56%;
     
-    --beige: 30 15% 20%;
+    --beige: 220 10% 10%;
     --navy: 220 20% 90%;
 
     --sidebar-background: 240 5.9% 10%;
@@ -102,19 +102,33 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: var(--font-sans);
+    letter-spacing: -0.011em;
   }
 
   h1, h2, h3 {
     font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.15);
+    color: hsl(var(--foreground));
   }
 }
 
 @layer components {
   .nav-link {
-    @apply text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors;
+    @apply text-sm tracking-wide text-muted-foreground hover:text-foreground transition-all duration-300 ease-out;
   }
   
   .nav-link-active {
@@ -122,6 +136,6 @@
   }
   
   .social-icon {
-    @apply w-5 h-5 text-foreground hover:text-primary transition-colors cursor-pointer;
+    @apply w-5 h-5 text-foreground hover:text-primary transition-all duration-300 ease-out cursor-pointer;
   }
 }
