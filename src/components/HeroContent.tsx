@@ -20,21 +20,21 @@ const HeroContent = () => {
           variant="default"
           size="lg"
           className="rounded-full px-8 font-medium text-sm tracking-wide shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
-          asChild
-        >
+          asChild>
+
           <Link to="/projects">PROJECTS</Link>
         </Button>
         <Button
           variant="outline"
           size="lg"
-          className="rounded-full px-8 font-medium text-sm tracking-wide hover:bg-foreground hover:text-background transition-all duration-300"
-        >
+          className="rounded-full px-8 font-medium text-sm tracking-wide hover:bg-foreground hover:text-background transition-all duration-300">
+
           RESUME
         </Button>
       </div>
 
       {/* Bio Paragraphs */}
-      <div className="space-y-4 text-muted-foreground max-w-md leading-relaxed text-[0.95rem]">
+      <div className="space-y-4 text-muted-foreground max-w-md leading-relaxed text-[0.95rem] pr-[10px]">
         <p>
           I am a System Design Engineering graduate student who builds practical
           software systems at the intersection of web applications and AI.
@@ -46,8 +46,8 @@ const HeroContent = () => {
           of delivering clear, trustworthy results.
         </p>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default HeroContent;
