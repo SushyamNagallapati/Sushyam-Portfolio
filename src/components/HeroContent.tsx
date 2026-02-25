@@ -14,7 +14,7 @@ const HeroContent = () => {
   const typedText = useTypingAnimation(roles);
 
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden bg-background">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Animated gradient blob */}
       <div
         aria-hidden
@@ -31,7 +31,7 @@ const HeroContent = () => {
         className="pointer-events-none absolute inset-0 bg-grid-pattern opacity-[0.03] dark:opacity-[0.06]"
       />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16 py-24">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-center gap-16">
         {/* Profile Card */}
         <div className="flex-shrink-0 animate-fade-in" style={{ animationDelay: "0.1s", opacity: 0 }}>
           <div className="relative group">
