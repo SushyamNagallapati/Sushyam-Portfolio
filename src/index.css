@@ -140,71 +140,8 @@
   .nav-link-active {
     @apply text-primary;
   }
-
-  /* Pill-style nav links with animated underline */
-  .nav-link-pill {
-    @apply relative text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-1.5 rounded-lg transition-all duration-200 ease-out;
-  }
-  .nav-link-pill::after {
-    content: '';
-    @apply absolute bottom-0.5 left-3 right-3 h-[2px] rounded-full bg-primary scale-x-0 origin-left transition-transform duration-300 ease-out;
-  }
-  .nav-link-pill:hover::after {
-    @apply scale-x-100;
-  }
-  .nav-link-pill-active {
-    @apply text-primary;
-    background-color: hsl(var(--primary) / 0.08);
-  }
-  .nav-link-pill-active::after {
-    @apply scale-x-100;
-  }
   
   .social-icon {
     @apply w-5 h-5 text-foreground hover:text-primary transition-all duration-300 ease-out cursor-pointer;
   }
-
-  /* Animated gradient blobs */
-  .blob {
-    @apply absolute rounded-full mix-blend-normal filter blur-3xl opacity-20 dark:opacity-10 pointer-events-none;
-    animation: blob-float 12s ease-in-out infinite;
-  }
-  .blob-1 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, hsl(220 90% 56% / 0.8), hsl(240 80% 60% / 0.3));
-    top: -20%;
-    left: -10%;
-    animation-delay: 0s;
-  }
-  .blob-2 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, hsl(210 80% 65% / 0.7), hsl(220 90% 56% / 0.2));
-    bottom: -10%;
-    right: -5%;
-    animation-delay: -4s;
-  }
-  .blob-3 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, hsl(230 70% 70% / 0.6), transparent);
-    top: 40%;
-    left: 40%;
-    animation-delay: -8s;
-  }
-
-  .bg-grid-pattern {
-    background-image:
-      linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-}
-
-@keyframes blob-float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(30px, -20px) scale(1.05); }
-  50% { transform: translate(-20px, 30px) scale(0.97); }
-  75% { transform: translate(20px, 10px) scale(1.03); }
 }
