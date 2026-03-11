@@ -1,4 +1,5 @@
 import { useState } from "react";
+import chatbotArchitecture from "@/assets/chatbot-architecture.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
