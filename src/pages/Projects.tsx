@@ -185,12 +185,20 @@ const Projects = () => {
                   </div>
 
                   {/* Project Image */}
-                  <div className="flex-1">
+                  <div className="flex-1 flex flex-col gap-4">
                     <img
                       src={project.image}
                       alt={project.name}
                       className="w-full max-w-md h-auto object-contain shadow-lg"
                     />
+                    {"extraImages" in project && (project as any).extraImages?.map((img: string, i: number) => (
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`${project.name} ${i + 2}`}
+                        className="w-full max-w-md h-auto object-contain shadow-lg"
+                      />
+                    ))}
                   </div>
                 </div>
               ))}
