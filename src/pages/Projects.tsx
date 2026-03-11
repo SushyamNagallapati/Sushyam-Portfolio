@@ -45,6 +45,7 @@ const projects = [
     description:
       "Built a local-first Retrieval-Augmented Generation (RAG) assistant that allows users to ask natural language questions over their own PDF documents using an on-device LLM. The goal was to explore privacy-preserving, offline-capable AI workflows while maintaining strong retrieval accuracy and response grounding.",
     image: localRagImg,
+    extraImages: [localRagImg2],
     viewMoreUrl: "",
     githubUrl: "https://github.com/SushyamNagallapati/RAG",
     categories: ["AI/ML Experiments"] as ProjectCategory[],
