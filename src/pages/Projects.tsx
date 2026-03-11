@@ -3,6 +3,7 @@ import agenticAiInsuranceImg from "@/assets/agentic-ai-insurance.png";
 import customChatbotImg from "@/assets/custom-chatbot.jpg";
 import pathPlanningImg from "@/assets/path-planning.png";
 import localRagImg from "@/assets/local-rag-assistant.jpg";
+import iotMachiningImg from "@/assets/iot-machining.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
