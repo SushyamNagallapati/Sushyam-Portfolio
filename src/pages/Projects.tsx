@@ -57,7 +57,7 @@ const projects = [
     name: "Autonomous Overtaking with SAC-MPC and Vision-Based Perception",
     description:
       "Designed and evaluated a full-stack autonomous driving system for opposite-lane overtaking on two-way roads, combining real-time perception, reinforcement learning, and model predictive control. The goal was to enable safe, human-like overtaking behavior under tight spatial and safety constraints using only onboard vision.",
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop",
+    image: autonomousOvertakingImg,
     viewMoreUrl: "https://drive.google.com/file/d/1kFC-D7zrsPnd96tIv8DZh7WrauieD6Ge/view?usp=sharing",
     githubUrl: "#",
     categories: ["Selected"] as ProjectCategory[],
