@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sushyam | Portfolio</title>
+    <meta name="description" content="Welcome to Sushyam's professional portfolio. Discover my projects, experience, and skills." />
+    <meta name="author" content="Sushyam" />
+
+    <meta property="og:title" content="Sushyam | Portfolio" />
+    <meta property="og:description" content="Welcome to Sushyam's professional portfolio. Discover my projects, experience, and skills." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Sushyam" />
+    <meta name="twitter:image" content="/og-image.png" />
+    <script type="module" crossorigin src="/assets/index-BcRrk0OW.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-VAH72fRz.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  <script src="https://cdn.gpteng.co/lovable.js" type="module"></script></body>
+</html>
