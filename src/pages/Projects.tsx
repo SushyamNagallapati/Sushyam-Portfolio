@@ -3,7 +3,6 @@ import agenticAiInsuranceImg from "@/assets/agentic-ai-insurance.png";
 import customChatbotImg from "@/assets/custom-chatbot.jpg";
 import pathPlanningImg from "@/assets/path-planning.png";
 import localRagImg from "@/assets/local-rag-assistant.jpg";
-import localRagImg2 from "@/assets/local-rag-assistant-2.jpg";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -45,7 +44,6 @@ const projects = [
     description:
       "Built a local-first Retrieval-Augmented Generation (RAG) assistant that allows users to ask natural language questions over their own PDF documents using an on-device LLM. The goal was to explore privacy-preserving, offline-capable AI workflows while maintaining strong retrieval accuracy and response grounding.",
     image: localRagImg,
-    extraImages: [localRagImg2],
     viewMoreUrl: "",
     githubUrl: "https://github.com/SushyamNagallapati/RAG",
     categories: ["AI/ML Experiments"] as ProjectCategory[],
@@ -185,20 +183,12 @@ const Projects = () => {
                   </div>
 
                   {/* Project Image */}
-                  <div className="flex-1 flex flex-col gap-4">
+                  <div className="flex-1">
                     <img
                       src={project.image}
                       alt={project.name}
                       className="w-full max-w-md h-auto object-contain shadow-lg"
                     />
-                    {"extraImages" in project && (project as any).extraImages?.map((img: string, i: number) => (
-                      <img
-                        key={i}
-                        src={img}
-                        alt={`${project.name} ${i + 2}`}
-                        className="w-full max-w-md h-auto object-contain shadow-lg"
-                      />
-                    ))}
                   </div>
                 </div>
               ))}
