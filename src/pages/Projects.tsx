@@ -1,6 +1,7 @@
 import { useState } from "react";
 import agenticAiInsuranceImg from "@/assets/agentic-ai-insurance.png";
 import customChatbotImg from "@/assets/custom-chatbot.jpg";
+import pathPlanningImg from "@/assets/path-planning.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -61,7 +62,7 @@ const projects = [
     name: "Path Planning with Classical, Learning-Based, and RL Methods",
     description:
       "Explored how classical planners, learning-based models, and reinforcement learning can be combined to improve path planning for mobile robots in obstacle-dense environments. The project evaluated when traditional algorithms break down, how far learning-based models can generalize, and whether RL can refine planned paths under realistic dynamics.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+    image: pathPlanningImg,
     viewMoreUrl: "https://drive.google.com/file/d/1NObQ4eHOOZXq_Eaq2_VeIma8n2_n4giv/view?usp=sharing",
     githubUrl: "https://github.com/SushyamNagallapati/path-planning-cnn/tree/master",
     categories: ["AI/ML Experiments"] as ProjectCategory[],
@@ -185,7 +186,7 @@ const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="w-full max-w-md h-auto object-cover shadow-lg"
+                      className="w-full max-w-md h-auto object-contain shadow-lg"
                     />
                   </div>
                 </div>
