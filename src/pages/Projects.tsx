@@ -183,11 +183,11 @@ const Projects = () => {
                   </div>
 
                   {/* Project Image */}
-                  <div className="flex-1">
+                  <div className="flex-1 flex items-center justify-center">
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="w-full max-w-md h-auto object-contain shadow-lg"
+                      className="w-full max-w-md h-auto object-contain shadow-lg mx-auto"
                     />
                   </div>
                 </div>
