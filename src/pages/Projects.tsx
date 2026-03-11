@@ -186,7 +186,7 @@ const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="w-full max-w-md h-auto object-cover shadow-lg"
+                      className="w-full max-w-md h-auto object-contain shadow-lg"
                     />
                   </div>
                 </div>
