@@ -2,6 +2,7 @@ import { useState } from "react";
 import agenticAiInsuranceImg from "@/assets/agentic-ai-insurance.png";
 import customChatbotImg from "@/assets/custom-chatbot.jpg";
 import pathPlanningImg from "@/assets/path-planning.png";
+import localRagImg from "@/assets/local-rag-assistant.jpg";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -42,7 +43,7 @@ const projects = [
     name: "Local RAG Assistant with LLaMA 3.2",
     description:
       "Built a local-first Retrieval-Augmented Generation (RAG) assistant that allows users to ask natural language questions over their own PDF documents using an on-device LLM. The goal was to explore privacy-preserving, offline-capable AI workflows while maintaining strong retrieval accuracy and response grounding.",
-    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop",
+    image: localRagImg,
     viewMoreUrl: "",
     githubUrl: "https://github.com/SushyamNagallapati/RAG",
     categories: ["AI/ML Experiments"] as ProjectCategory[],
