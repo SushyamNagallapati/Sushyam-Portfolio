@@ -2,6 +2,7 @@ import { useState } from "react";
 import agenticAiInsuranceImg from "@/assets/agentic-ai-insurance.png";
 import customChatbotImg from "@/assets/custom-chatbot.jpg";
 import pathPlanningImg from "@/assets/path-planning.png";
+import localRagImg from "@/assets/local-rag-assistant.jpg";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
