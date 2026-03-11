@@ -1,4 +1,5 @@
 import { useState } from "react";
+import agenticAiInsuranceImg from "@/assets/agentic-ai-insurance.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -19,7 +20,7 @@ const projects = [
     name: "Agentic AI Insurance Assistant",
     description:
       "Designed and built a multi-agent AI assistant for the health insurance domain to help users retrieve claims, understand policy documents, and take action through natural language queries. The goal was to reduce manual claim lookups and improve accuracy in document-driven responses while operating within strict privacy and role-based constraints.",
-    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop",
+    image: agenticAiInsuranceImg,
     viewMoreUrl: "https://drive.google.com/file/d/1JP7RQRm-4GNahKEbpCaVNlaz58WeppNz/view?usp=sharing",
     githubUrl: "https://github.com/SushyamNagallapati/Agentic-Financial-Claim-Assistant-MCP-RAG",
     categories: ["Selected"] as ProjectCategory[],
