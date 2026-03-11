@@ -4,6 +4,7 @@ import customChatbotImg from "@/assets/custom-chatbot.jpg";
 import pathPlanningImg from "@/assets/path-planning.png";
 import localRagImg from "@/assets/local-rag-assistant.jpg";
 import iotMachiningImg from "@/assets/iot-machining.png";
+import healthcareSystemImg from "@/assets/healthcare-system.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -84,7 +85,7 @@ const projects = [
     name: "Healthcare System Modeling",
     description:
       "Built a system dynamics model to understand how patient flow, staff availability, and medical resources affect hospital performance. The model shows how high patient demand, staffing shortages, and limited equipment lead to delays, staff overload, and poorer patient outcomes, and how improving capacity and response time can significantly improve care under pressure.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+    image: healthcareSystemImg,
     viewMoreUrl: "https://drive.google.com/file/d/1lKpnkhD77BO0G6pk7cRgAiI_H3At8DKT/view?usp=sharing",
     githubUrl: "",
     categories: ["Design System Components"] as ProjectCategory[],
