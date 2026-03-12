@@ -28,8 +28,9 @@ const HeroContent = () => {
           variant="outline"
           size="lg"
           className="rounded-full px-8 font-medium text-sm tracking-wide hover:bg-foreground hover:text-background transition-all duration-300"
+          asChild
         >
-          RESUME
+          <a href="https://drive.google.com/file/d/1-PDWDhiBfAXudIomRhcSvbpQiifRZ1pj/view?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
         </Button>
       </div>
 
