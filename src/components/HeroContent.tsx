@@ -30,7 +30,7 @@ const HeroContent = () => {
           className="rounded-full px-8 font-medium text-sm tracking-wide hover:bg-foreground hover:text-background transition-all duration-300"
           asChild
         >
-          <a href="https://drive.google.com/file/d/1-PDWDhiBfAXudIomRhcSvbpQiifRZ1pj/view?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
+          <a href="https://drive.google.com/file/d/11T8B1GGh1JL3lRuyoid2SZwoq5s4ETZ7/view?usp=sharing" target="_blank" rel="noopener noreferrer">RESUME</a>
         </Button>
       </div>
 
