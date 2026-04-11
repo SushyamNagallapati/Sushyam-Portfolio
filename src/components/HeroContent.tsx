@@ -15,12 +15,12 @@ const HeroContent = () => {
     <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
       {/* Main Heading */}
       <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold text-foreground leading-[0.95] mb-4 sm:mb-5">
-        Hello
+        Sushyam Nagallapati
       </h1>
 
       {/* Subtitle */}
       <p className="text-base sm:text-lg md:text-xl text-foreground/80 mb-6 sm:mb-8 font-light">
-        Here's who I am & what I do
+        Software Engineer | AI/ML | Full Stack
       </p>
 
       {/* Buttons */}
