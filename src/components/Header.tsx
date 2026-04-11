@@ -34,9 +34,6 @@ const Header = () => {
           <span className="font-semibold text-sm sm:text-base tracking-tight text-foreground truncate">
             Sushyam Nagallapati
           </span>
-          <span className="text-muted-foreground text-xs sm:text-sm hidden md:inline whitespace-nowrap">
-            / Web · AI / ML
-          </span>
         </Link>
 
         {/* Desktop Navigation */}
