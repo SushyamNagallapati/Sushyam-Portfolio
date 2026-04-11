@@ -10,7 +10,7 @@ const Header = () => {
 
   const navItems = [
     { label: "ABOUT ME", href: "/", active: location.pathname === "/" },
-    { label: "RESUME", href: "{ label: "RESUME", href: "https://drive.google.com/file/d/1_vDMkN7Duow5DrriBFWrxN1F4xY-Ujvx/view?usp=sharing", active: false, isExternal: true },", active: false, isExternal: true },
+    { label: "RESUME", href: "https://drive.google.com/file/d/1_vDMkN7Duow5DrriBFWrxN1F4xY-Ujvx/view?usp=sharing", active: false, isExternal: true },
     { label: "PROJECTS", href: "/projects", active: location.pathname === "/projects" },
     {
       label: "LINKEDIN",
