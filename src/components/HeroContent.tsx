@@ -15,12 +15,12 @@ const HeroContent = () => {
     <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
       {/* Main Heading */}
       <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold text-foreground leading-[0.95] mb-4 sm:mb-5">
-        Sushyam Nagallapati
+        Hello
       </h1>
 
       {/* Subtitle */}
       <p className="text-base sm:text-lg md:text-xl text-foreground/80 mb-6 sm:mb-8 font-light">
-        Software Engineer | AI/ML | Full Stack
+        Here's who I am & what I do
       </p>
 
       {/* Buttons */}
@@ -46,10 +46,10 @@ const HeroContent = () => {
       {/* Bio Paragraphs */}
       <div className="space-y-4 text-muted-foreground max-w-md mx-auto lg:mx-0 leading-relaxed text-sm sm:text-[0.95rem]">
         <p>
-          I'm a Software Engineer completing my Master of Engineering in System Design (AI/ML) at the University of Waterloo. My background spans hardware, software, and AI, from building IoT systems and robotic arms during my Mechatronics undergrad, to building multi-agent AI systems, RAG pipelines, and full-stack web applications today.
+          I'm a Software Engineer completing my Master of Engineering in System Design (AI/ML) at the University of Waterloo. My background spans hardware, software, and AI — from building IoT systems and robotic arms during my Mechatronics undergrad, to building multi-agent AI systems, RAG pipelines, and full-stack web applications today.
         </p>
         <p>
-          I work primarily in Python, TypeScript, JavaScript, React, Node.js, and FastAPI, with hands-on experience in LLM integration, agentic systems, vector databases, and REST API design.
+          I work primarily in Python, TypeScript, JavaScript, React, Node.js, and FastAPI, with hands-on experience in LLM integration, agentic systems, vector databases, and REST API design. I enjoy building things that actually work and solve real problems.
         </p>
       </div>
 
