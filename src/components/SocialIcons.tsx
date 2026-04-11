@@ -18,7 +18,9 @@ const SocialIcons = ({ className = "", iconClassName = "social-icon" }: SocialIc
         <Linkedin className={iconClassName} />
       </a>
       <a
-        href="#"
+        href="https://github.com/SushyamNagallapati"
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label="GitHub"
         className="hover:scale-110 transition-transform duration-300"
       >
