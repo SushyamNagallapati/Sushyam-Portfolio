@@ -33,7 +33,7 @@ const projects = [
   },
   {
     id: 9,
-    name: "HorusCast – Weather and Trail Planning App",
+    name: "HorusCast Weather and Trail Planning App",
     description:
       "Built a full-stack geospatial web app to help users plan outdoor activities by combining trail discovery and hyper-local weather data. The Node.js/Express.js backend aggregates three external REST APIs, Mapbox for maps and geocoding, OpenStreetMap Overpass API for trail discovery, and NASA POWER API for climate data, into a single structured response for the frontend.",
     image: "/placeholder.svg",
