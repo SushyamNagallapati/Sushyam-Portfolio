@@ -25,7 +25,7 @@ const projects = [
     id: 1,
     name: "Agentic Financial Claim Assistant",
     description:
-      "Built a modular multi-agent AI system using Python, LangGraph, and LLaMA 3.2 to resolve health insurance claim queries. The system integrates a RAG pipeline for policy document understanding, an NL-to-SQL engine using graph-based schema traversal, and an automated email drafting agent. Evaluated using accuracy, precision, and latency metrics — RAG achieved ~88% answer correctness and NL-to-SQL achieved 100% accuracy on small schemas.",
+      "Built a modular multi-agent AI system using Python, LangGraph, and LLaMA 3.2 to resolve health insurance claim queries. The system integrates a RAG pipeline for policy document understanding, an NL-to-SQL engine using graph-based schema traversal, and an automated email drafting agent. Evaluated using accuracy, precision, and latency metrics, RAG achieved ~88% answer correctness and NL-to-SQL achieved 100% accuracy on small schemas.",
     image: agenticAiInsuranceImg,
     viewMoreUrl: "https://drive.google.com/file/d/1JP7RQRm-4GNahKEbpCaVNlaz58WeppNz/view?usp=sharing",
     githubUrl: "https://github.com/SushyamNagallapati/Agentic-Financial-Claim-Assistant-MCP-RAG",
@@ -35,7 +35,7 @@ const projects = [
     id: 9,
     name: "HorusCast – Weather and Trail Planning App",
     description:
-      "Built a full-stack geospatial web app to help users plan outdoor activities by combining trail discovery and hyper-local weather data. The Node.js/Express.js backend aggregates three external REST APIs — Mapbox for maps and geocoding, OpenStreetMap Overpass API for trail discovery, and NASA POWER API for climate data — into a single structured response for the frontend.",
+      "Built a full-stack geospatial web app to help users plan outdoor activities by combining trail discovery and hyper-local weather data. The Node.js/Express.js backend aggregates three external REST APIs, Mapbox for maps and geocoding, OpenStreetMap Overpass API for trail discovery, and NASA POWER API for climate data, into a single structured response for the frontend.",
     image: "/placeholder.svg",
     viewMoreUrl: "",
     githubUrl: "",
