@@ -1,5 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Badge } from "@/components/ui/badge";
+
+const skillCategories = [
+  { label: "Languages", skills: ["Python", "TypeScript", "JavaScript", "SQL"] },
+  { label: "Frontend", skills: ["React.js", "HTML", "CSS", "Tailwind CSS"] },
+  { label: "Backend", skills: ["Node.js", "Express.js", "FastAPI", "REST APIs"] },
+  { label: "AI / LLM", skills: ["LLM Agents", "RAG", "LangGraph", "LLaMA 3.2", "OpenAI API", "Prompt Engineering", "ChromaDB"] },
+  { label: "Tools", skills: ["Git", "GitHub", "VS Code", "Postman", "Jira", "Linux/Unix"] },
+];
 
 const HeroContent = () => {
   return (
@@ -37,15 +46,30 @@ const HeroContent = () => {
       {/* Bio Paragraphs */}
       <div className="space-y-4 text-muted-foreground max-w-md mx-auto lg:mx-0 leading-relaxed text-sm sm:text-[0.95rem]">
         <p>
-          I am a System Design Engineering graduate student who builds practical
-          software systems at the intersection of web applications and AI.
+          I'm a Software Engineer completing my Master of Engineering in System Design (AI/ML) at the University of Waterloo. My background spans hardware, software, and AI — from building IoT systems and robotic arms during my Mechatronics undergrad, to building multi-agent AI systems, RAG pipelines, and full-stack web applications today.
         </p>
         <p>
-          Recently, I've been focused on building AI-powered tools using
-          retrieval-based systems, chat interfaces, and data-driven workflows. I
-          care deeply about making these tools reliable, easy to use, and capable
-          of delivering clear, trustworthy results.
+          I work primarily in Python, TypeScript, JavaScript, React, Node.js, and FastAPI, with hands-on experience in LLM integration, agentic systems, vector databases, and REST API design. I enjoy building things that actually work and solve real problems.
         </p>
+      </div>
+
+      {/* Skills Section */}
+      <div className="mt-8 sm:mt-10 max-w-md mx-auto lg:mx-0">
+        <h2 className="font-serif text-lg sm:text-xl font-bold text-foreground mb-4">Skills</h2>
+        <div className="space-y-3">
+          {skillCategories.map((category) => (
+            <div key={category.label}>
+              <span className="text-xs font-medium text-foreground/70 uppercase tracking-wider">{category.label}</span>
+              <div className="flex flex-wrap gap-1.5 mt-1.5">
+                {category.skills.map((skill) => (
+                  <Badge key={skill} variant="secondary" className="text-xs font-normal">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

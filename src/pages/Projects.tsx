@@ -4,7 +4,6 @@ import customChatbotImg from "@/assets/custom-chatbot.jpg";
 import pathPlanningImg from "@/assets/path-planning.png";
 import localRagImg from "@/assets/local-rag-assistant.jpg";
 import iotMachiningImg from "@/assets/iot-machining.png";
-import healthcareSystemImg from "@/assets/healthcare-system.png";
 import roboticArmImg from "@/assets/robotic-arm.png";
 import autonomousOvertakingImg from "@/assets/autonomous-overtaking.png";
 import Header from "@/components/Header";
@@ -24,19 +23,39 @@ const categories: ProjectCategory[] = [
 const projects = [
   {
     id: 1,
-    name: "Agentic AI Insurance Assistant",
+    name: "Agentic Financial Claim Assistant",
     description:
-      "Designed and built a multi-agent AI assistant for the health insurance domain to help users retrieve claims, understand policy documents, and take action through natural language queries. The goal was to reduce manual claim lookups and improve accuracy in document-driven responses while operating within strict privacy and role-based constraints.",
+      "Built a modular multi-agent AI system using Python, LangGraph, and LLaMA 3.2 to resolve health insurance claim queries. The system integrates a RAG pipeline for policy document understanding, an NL-to-SQL engine using graph-based schema traversal, and an automated email drafting agent. Evaluated using accuracy, precision, and latency metrics — RAG achieved ~88% answer correctness and NL-to-SQL achieved 100% accuracy on small schemas.",
     image: agenticAiInsuranceImg,
     viewMoreUrl: "https://drive.google.com/file/d/1JP7RQRm-4GNahKEbpCaVNlaz58WeppNz/view?usp=sharing",
     githubUrl: "https://github.com/SushyamNagallapati/Agentic-Financial-Claim-Assistant-MCP-RAG",
-    categories: ["Selected"] as ProjectCategory[],
+    categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
+  },
+  {
+    id: 9,
+    name: "HorusCast – Weather and Trail Planning App",
+    description:
+      "Built a full-stack geospatial web app to help users plan outdoor activities by combining trail discovery and hyper-local weather data. The Node.js/Express.js backend aggregates three external REST APIs — Mapbox for maps and geocoding, OpenStreetMap Overpass API for trail discovery, and NASA POWER API for climate data — into a single structured response for the frontend.",
+    image: "/placeholder.svg",
+    viewMoreUrl: "",
+    githubUrl: "",
+    categories: ["Selected", "Web/Mobile Apps"] as ProjectCategory[],
+  },
+  {
+    id: 10,
+    name: "Movie Search Web Application",
+    description:
+      "Built a React frontend consuming a live movie database REST API with real-time search, favorites management, and reusable component architecture. Uses useState and useEffect hooks for clean state management and dynamic data rendering.",
+    image: "/placeholder.svg",
+    viewMoreUrl: "",
+    githubUrl: "",
+    categories: ["Web/Mobile Apps"] as ProjectCategory[],
   },
   {
     id: 5,
     name: "Custom ChatBot",
     description:
-      "Designed and built a full-stack AI chatbot using a TypeScript and Express backend with a React-based chat interface. The system maintains conversation context, handles validation and errors, and integrates with OpenAI to generate responses. The project focuses on clean architecture, modular backend design, and essential chat UX patterns such as message styling, markdown support, typing indicators, and auto-scrolling to deliver a clear and usable chat experience.",
+      "Built a full-stack AI chatbot to explore how large language models integrate into real web applications. The TypeScript/Node.js backend handles multi-turn conversations with context tracking, input validation, and clean separation across route, controller, service, and repository layers. The React frontend includes real-time typing indicators, markdown rendering, and auto-scroll.",
     image: customChatbotImg,
     viewMoreUrl: "",
     githubUrl: "https://github.com/SushyamNagallapati/Custom-ChatBot",
@@ -76,20 +95,10 @@ const projects = [
     id: 7,
     name: "IoT Based Control of Machining Process",
     description:
-      "Built an IoT-enabled machining control system using a PLC and ESP32 to remotely monitor and control drilling operations. The system replaces manual and wired control with a mobile-based interface, improving safety, reducing downtime, and enabling real-time operation control through wireless communication.",
+      "Built an IoT-based remote monitoring and control system integrating a Delta PLC with an ESP32 microcontroller over Wi-Fi for real-time machining data acquisition and process control. Implemented hardware interfacing between sensors, relay modules, and the PLC, replacing manual control with a wireless interface. Evaluated system reliability, data transmission accuracy, and remote command responsiveness.",
     image: iotMachiningImg,
     viewMoreUrl: "https://drive.google.com/file/d/1l86K94k6X1TRprfh9AVbgrFCd-S3wJwT/view?usp=sharing",
     githubUrl: "https://github.com/SushyamNagallapati/IOT-BASED-CONTROL-OF-MACHINING-PROCESS-USING-PLC-AND-ESP32",
-    categories: ["Design System Components"] as ProjectCategory[],
-  },
-  {
-    id: 6,
-    name: "Healthcare System Modeling",
-    description:
-      "Built a system dynamics model to understand how patient flow, staff availability, and medical resources affect hospital performance. The model shows how high patient demand, staffing shortages, and limited equipment lead to delays, staff overload, and poorer patient outcomes, and how improving capacity and response time can significantly improve care under pressure.",
-    image: healthcareSystemImg,
-    viewMoreUrl: "https://drive.google.com/file/d/1lKpnkhD77BO0G6pk7cRgAiI_H3At8DKT/view?usp=sharing",
-    githubUrl: "",
     categories: ["Design System Components"] as ProjectCategory[],
   },
   {
@@ -204,7 +213,7 @@ const Projects = () => {
           ) : (
             <div className="py-16 text-center">
               <p className="text-base sm:text-lg text-foreground mb-2">
-                Working on cool things. Will be sharing them here soon.
+                No projects in this category yet.
               </p>
               <p className="text-sm sm:text-base text-muted-foreground">
                 Have questions? Feel free to{" "}
