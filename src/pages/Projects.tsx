@@ -204,7 +204,7 @@ const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="w-full max-w-sm sm:max-w-md h-auto object-contain shadow-lg mx-auto rounded-lg"
+                      className="w-full max-w-sm sm:max-w-md h-auto object-contain shadow-lg mx-auto rounded-sm"
                     />
                   </div>
                 </div>

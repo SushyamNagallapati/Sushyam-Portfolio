@@ -11,9 +11,9 @@ const Footer = () => {
           </p>
 
           {/* Contact Info */}
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs sm:text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-10 text-xs sm:text-sm">
             <div className="text-center">
-              <p className="font-medium text-foreground text-xs tracking-wide uppercase mb-0.5 sm:mb-1">Call</p>
+              <p className="font-medium text-foreground text-[10px] sm:text-xs tracking-wide uppercase mb-0.5 sm:mb-1">Call</p>
               <a
                 href="tel:2269756863"
                 className="text-muted-foreground hover:text-foreground transition-colors duration-300"
@@ -22,16 +22,16 @@ const Footer = () => {
               </a>
             </div>
             <div className="text-center">
-              <p className="font-medium text-foreground text-xs tracking-wide uppercase mb-0.5 sm:mb-1">Write</p>
+              <p className="font-medium text-foreground text-[10px] sm:text-xs tracking-wide uppercase mb-0.5 sm:mb-1">Write</p>
               <a
                 href="mailto:s2nagall@uwaterloo.ca"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-xs sm:text-sm"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-[11px] sm:text-sm"
               >
                 s2nagall@uwaterloo.ca
               </a>
             </div>
             <div className="text-center">
-              <p className="font-medium text-foreground text-xs tracking-wide uppercase mb-0.5 sm:mb-1">Follow</p>
+              <p className="font-medium text-foreground text-[10px] sm:text-xs tracking-wide uppercase mb-0.5 sm:mb-1">Follow</p>
               <SocialIcons
                 className="mt-1"
                 iconClassName="w-3.5 h-3.5 sm:w-4 sm:h-4 text-foreground hover:text-primary transition-all duration-300 cursor-pointer"
