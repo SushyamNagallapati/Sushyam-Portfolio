@@ -4,12 +4,12 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 const ProfileCard = () => {
   return (
     <div
-      className="bg-card border border-border/60 shadow-lg shadow-black/5 dark:shadow-black/20 w-full max-w-[280px] mx-auto animate-fade-in"
+      className="bg-card shadow-xl shadow-black/5 dark:shadow-black/20 relative z-10 w-full max-w-[280px] mx-auto animate-fade-in"
       style={{ animationDelay: "0.2s" }}
     >
       <div className="p-8 flex flex-col items-center">
         {/* Profile Photo */}
-        <div className="w-36 h-36 rounded-full overflow-hidden mb-6 border-4 border-background shadow-lg">
+        <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-background shadow-lg">
           <img
             src={profilePhoto}
             alt="Sushyam Nagallapati"
@@ -27,7 +27,7 @@ const ProfileCard = () => {
 
         {/* Title */}
         <p className="text-xs tracking-[0.2em] text-muted-foreground uppercase font-medium">
-          Software Engineer
+          SOFTWARE DEVELOPER
         </p>
       </div>
 
