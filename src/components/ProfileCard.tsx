@@ -4,10 +4,10 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 const ProfileCard = () => {
   return (
     <div
-      className="bg-card shadow-xl shadow-black/5 dark:shadow-black/20 relative z-10 w-full max-w-[280px] mx-auto animate-fade-in"
+      className="bg-card shadow-xl shadow-black/5 dark:shadow-black/20 relative z-10 w-full max-w-[280px] mx-auto animate-fade-in rounded-2xl"
       style={{ animationDelay: "0.2s" }}
     >
-      <div className="p-8 flex flex-col items-center">
+      <div className="p-6 flex flex-col items-center">
         {/* Profile Photo */}
         <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-background shadow-lg">
           <img
