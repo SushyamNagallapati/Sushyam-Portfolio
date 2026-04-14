@@ -4,36 +4,21 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 const ProfileCard = () => {
   return (
     <div
-      className="bg-card shadow-xl shadow-black/5 dark:shadow-black/20 relative z-10 w-full max-w-[280px] mx-auto animate-fade-in"
+      className="animate-fade-in flex flex-col items-center"
       style={{ animationDelay: "0.2s" }}
     >
-      <div className="p-8 flex flex-col items-center">
-        {/* Profile Photo */}
-        <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-background shadow-lg">
-          <img
-            src={profilePhoto}
-            alt="Sushyam Nagallapati"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Name */}
-        <h2 className="font-serif text-xl font-bold text-center text-foreground leading-tight">
-          Sushyam Nagallapati
-        </h2>
-
-        {/* Divider */}
-        <div className="w-10 h-0.5 bg-primary mt-4 mb-4 rounded-full" />
-
-        {/* Title */}
-        <p className="text-xs tracking-[0.2em] text-muted-foreground uppercase font-medium">
-          SOFTWARE DEVELOPER
-        </p>
+      {/* Profile Photo */}
+      <div className="w-52 h-52 sm:w-60 sm:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/30 ring-1 ring-border/30">
+        <img
+          src={profilePhoto}
+          alt="Sushyam Nagallapati"
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Social Icons */}
-      <div className="border-t border-border/60 py-4">
-        <SocialIcons className="justify-center" />
+      <div className="mt-5">
+        <SocialIcons />
       </div>
     </div>
   );

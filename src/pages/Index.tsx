@@ -8,25 +8,20 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Main Hero Section */}
-      <main className="flex-1 pt-16 pb-28 md:pb-20">
-        <section className="min-h-[calc(100vh-64px)] flex items-center relative overflow-hidden">
-          {/* Left Panel — desktop only */}
-          <div className="hidden lg:block absolute left-0 top-0 w-[38%] h-full bg-beige" />
-
-          {/* Content Area */}
-          <div className="w-full relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-0 px-6 sm:px-8 lg:px-0 py-12 lg:py-0">
-            {/* Profile Card — centered within the beige panel on desktop */}
-            <div className="flex-shrink-0 w-full max-w-[280px] mx-auto lg:mx-0 lg:w-[38%] lg:max-w-none lg:flex lg:justify-center">
-              <ProfileCard />
-            </div>
-
-            {/* Hero Content */}
-            <div className="w-full max-w-lg text-center lg:text-left lg:pl-10 xl:pl-14">
+      <main className="flex-1 flex items-center pt-16 pb-28 md:pb-20">
+        <div className="w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-10 lg:py-0">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-16 xl:gap-24">
+            {/* Text Content */}
+            <div className="flex-1 min-w-0">
               <HeroContent />
             </div>
+
+            {/* Profile Photo */}
+            <div className="flex justify-center lg:justify-end flex-shrink-0">
+              <ProfileCard />
+            </div>
           </div>
-        </section>
+        </div>
       </main>
 
       <Footer />
