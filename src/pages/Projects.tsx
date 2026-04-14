@@ -1,4 +1,5 @@
 import { useState } from "react";
+import horuscastImg from "@/assets/horuscast.png";
 import agenticAiInsuranceImg from "@/assets/agentic-ai-insurance.png";
 import customChatbotImg from "@/assets/custom-chatbot.jpg";
 import pathPlanningImg from "@/assets/path-planning.png";
