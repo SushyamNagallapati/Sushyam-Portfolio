@@ -7,6 +7,7 @@ import localRagImg from "@/assets/local-rag-assistant.jpg";
 import iotMachiningImg from "@/assets/iot-machining.png";
 import roboticArmImg from "@/assets/robotic-arm.png";
 import autonomousOvertakingImg from "@/assets/autonomous-overtaking.png";
+import movieSearchImg from "@/assets/movie-search.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -47,7 +48,7 @@ const projects = [
     name: "Movie Search Web Application",
     description:
       "Built a React frontend consuming a live movie database REST API with real-time search, favorites management, and reusable component architecture. Uses useState and useEffect hooks for clean state management and dynamic data rendering.",
-    image: "/placeholder.svg",
+    image: movieSearchImg,
     viewMoreUrl: "",
     githubUrl: "",
     categories: ["Web/Mobile Apps"] as ProjectCategory[],
