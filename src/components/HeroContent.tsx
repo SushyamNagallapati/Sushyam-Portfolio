@@ -42,10 +42,7 @@ const HeroContent = () => {
 
       {/* Bio */}
       <p className="text-muted-foreground max-w-md leading-relaxed text-sm sm:text-[0.95rem] mb-8">
-        I'm completing my Master of Engineering in System Design (AI/ML) at the
-        University of Waterloo. My background spans hardware, software, and AI —
-        from IoT systems and robotic arms to multi-agent AI, RAG pipelines, and
-        full-stack web applications.
+        I'm an engineer who started with hardware and moved into software and AI. Currently completing my MEng in System Design at the University of Waterloo, I've worked on everything from IoT systems and robotic arms to multi-agent AI, RAG pipelines, and full-stack web applications.
       </p>
 
       {/* Buttons */}
