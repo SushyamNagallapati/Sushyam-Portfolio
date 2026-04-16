@@ -1,36 +1,16 @@
 
 
-## Fix Index.tsx Layout Alignment
+## Update Project Categories
 
-### What changes
-Replace lines 17–30 in `src/pages/Index.tsx` — remove the extra wrapper `<div>` around the flex container, flatten the layout, and update the profile card and hero content wrappers per your spec.
+Two small edits in `src/pages/Projects.tsx`:
 
-### Before → After
+1. **HorusCast** (id 9): change `categories` from `["Selected", "Web/Mobile Apps"]` to `["Web/Mobile Apps"]` — removes it from the Selected section.
 
-**Remove**: The extra `<div className="w-full relative z-10">` wrapper (line 18/30).
+2. **Reorder for Web/Mobile Apps**: Move the **Custom ChatBot** entry (id 5) above the **HorusCast** entry (id 9) in the `projects` array so it appears first when the "Web/Mobile Apps" filter is active. Movie Search (id 10) follows.
 
-**Replace the content area** (lines 17–30) with:
+Final order in the array (top portion): Agentic Financial Claim Assistant → Custom ChatBot → HorusCast → Movie Search → rest unchanged.
 
-```tsx
-{/* Content Area */}
-<div className="w-full relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-0 px-6 sm:px-8 lg:px-0 py-12 lg:py-0">
-  {/* Profile Card — centered within the beige panel on desktop */}
-  <div className="flex-shrink-0 w-full max-w-[280px] mx-auto lg:mx-0 lg:w-[38%] lg:max-w-none lg:flex lg:justify-center">
-    <ProfileCard />
-  </div>
+Custom ChatBot keeps `["Web/Mobile Apps", "Selected"]` so it remains in Selected too.
 
-  {/* Hero Content */}
-  <div className="w-full max-w-lg text-center lg:text-left lg:pl-10 xl:pl-14">
-    <HeroContent />
-  </div>
-</div>
-```
-
-### Summary of changes
-1. Flattened nested wrapper — flex properties moved to the outer content div
-2. Profile card: single `max-w-[280px] mx-auto` on mobile; on desktop `lg:w-[38%]` with `lg:flex lg:justify-center` to center within the beige panel
-3. Gap changed to `gap-10 lg:gap-0`; padding normalized to `px-6 sm:px-8`
-4. Hero content gets `lg:pl-10 xl:pl-14` for breathing room
-
-**Only `src/pages/Index.tsx` is modified. No other files touched.**
+Only `src/pages/Projects.tsx` is modified.
 
