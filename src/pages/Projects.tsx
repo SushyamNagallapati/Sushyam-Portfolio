@@ -34,6 +34,16 @@ const projects = [
     categories: ["Selected", "AI/ML Experiments"] as ProjectCategory[],
   },
   {
+    id: 5,
+    name: "Custom ChatBot",
+    description:
+      "Built a full-stack AI chatbot to explore how large language models integrate into real web applications. The TypeScript/Node.js backend handles multi-turn conversations with context tracking, input validation, and clean separation across route, controller, service, and repository layers. The React frontend includes real-time typing indicators, markdown rendering, and auto-scroll.",
+    image: customChatbotImg,
+    viewMoreUrl: "",
+    githubUrl: "https://github.com/SushyamNagallapati/Custom-ChatBot",
+    categories: ["Web/Mobile Apps", "Selected"] as ProjectCategory[],
+  },
+  {
     id: 9,
     name: "HorusCast Weather and Trail Planning App",
     description:
@@ -41,7 +51,7 @@ const projects = [
     image: horuscastImg,
     viewMoreUrl: "",
     githubUrl: "",
-    categories: ["Selected", "Web/Mobile Apps"] as ProjectCategory[],
+    categories: ["Web/Mobile Apps"] as ProjectCategory[],
   },
   {
     id: 10,
@@ -52,16 +62,6 @@ const projects = [
     viewMoreUrl: "",
     githubUrl: "",
     categories: ["Web/Mobile Apps"] as ProjectCategory[],
-  },
-  {
-    id: 5,
-    name: "Custom ChatBot",
-    description:
-      "Built a full-stack AI chatbot to explore how large language models integrate into real web applications. The TypeScript/Node.js backend handles multi-turn conversations with context tracking, input validation, and clean separation across route, controller, service, and repository layers. The React frontend includes real-time typing indicators, markdown rendering, and auto-scroll.",
-    image: customChatbotImg,
-    viewMoreUrl: "",
-    githubUrl: "https://github.com/SushyamNagallapati/Custom-ChatBot",
-    categories: ["Web/Mobile Apps", "Selected"] as ProjectCategory[],
   },
   {
     id: 2,
