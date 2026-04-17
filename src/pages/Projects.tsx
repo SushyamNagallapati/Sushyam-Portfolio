@@ -35,7 +35,7 @@ const projects = [
   },
   {
     id: 5,
-    name: "Custom ChatBot",
+    name: "AI Powered SaaS Chatbot",
     description:
       "Built a full-stack AI chatbot to explore how large language models integrate into real web applications. The TypeScript/Node.js backend handles multi-turn conversations with context tracking, input validation, and clean separation across route, controller, service, and repository layers. The React frontend includes real-time typing indicators, markdown rendering, and auto-scroll.",
     image: customChatbotImg,
