@@ -11,7 +11,7 @@ import movieSearchImg from "@/assets/movie-search.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Github, Play } from "lucide-react";
+import { Github, Play, ExternalLink } from "lucide-react";
 
 type ProjectCategory = "Selected" | "AI/ML Experiments" | "Web/Mobile Apps" | "Design System Components";
 
@@ -60,6 +60,7 @@ const projects = [
       "Built a React frontend consuming a live movie database REST API with real-time search, favorites management, and reusable component architecture. Uses useState and useEffect hooks for clean state management and dynamic data rendering.",
     image: movieSearchImg,
     viewMoreUrl: "",
+    liveUrl: "https://movie-application-inky.vercel.app/",
     githubUrl: "",
     categories: ["Web/Mobile Apps"] as ProjectCategory[],
   },
@@ -182,6 +183,14 @@ const Projects = () => {
                           View more
                         </a>
                       )}
+                      {"liveUrl" in project && (project as any).liveUrl && (
+                        <Button variant="outline" size="sm" className="rounded-full px-5 sm:px-6 gap-2 text-xs sm:text-sm" asChild>
+                          <a href={(project as any).liveUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                            Live View
+                          </a>
+                        </Button>
+                      )}
                       {"videoUrl" in project && (project as any).videoUrl && (
                         <Button variant="outline" size="sm" className="rounded-full px-5 sm:px-6 gap-2 text-xs sm:text-sm" asChild>
                           <a href={(project as any).videoUrl} target="_blank" rel="noopener noreferrer">
@@ -203,11 +212,27 @@ const Projects = () => {
 
                   {/* Project Image */}
                   <div className="w-full lg:flex-1 flex items-center justify-center">
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      className="w-full max-w-sm sm:max-w-md h-auto object-contain shadow-lg mx-auto rounded-sm"
-                    />
+                    {"liveUrl" in project && (project as any).liveUrl ? (
+                      <a
+                        href={(project as any).liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full max-w-sm sm:max-w-md mx-auto cursor-pointer transition-transform hover:scale-[1.02]"
+                        aria-label={`Open live view of ${project.name}`}
+                      >
+                        <img
+                          src={project.image}
+                          alt={project.name}
+                          className="w-full h-auto object-contain shadow-lg rounded-sm"
+                        />
+                      </a>
+                    ) : (
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="w-full max-w-sm sm:max-w-md h-auto object-contain shadow-lg mx-auto rounded-sm"
+                      />
+                    )}
                   </div>
                 </div>
               ))}
