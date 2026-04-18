@@ -52,7 +52,7 @@ const projects = [
     image: horuscastImg,
     viewMoreUrl: "",
     liveUrl: "https://horus-cast-nasa-hackathon.vercel.app/",
-    githubUrl: "",
+    githubUrl: "https://github.com/SushyamNagallapati/HorusCast-NASA-Hackathon",
     categories: ["Web/Mobile Apps"] as ProjectCategory[],
   },
   {
@@ -63,7 +63,7 @@ const projects = [
     image: movieSearchImg,
     viewMoreUrl: "",
     liveUrl: "https://movie-application-inky.vercel.app/",
-    githubUrl: "",
+    githubUrl: "https://github.com/SushyamNagallapati/Movie-Application",
     categories: ["Web/Mobile Apps"] as ProjectCategory[],
   },
   {
