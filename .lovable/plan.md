@@ -1,16 +1,21 @@
 
 
-## Update Project Categories
+## Add Live View for Movie Search Project
 
-Two small edits in `src/pages/Projects.tsx`:
+Two changes in `src/pages/Projects.tsx` for the Movie Search Web Application entry (id 10):
 
-1. **HorusCast** (id 9): change `categories` from `["Selected", "Web/Mobile Apps"]` to `["Web/Mobile Apps"]` — removes it from the Selected section.
+1. **Add `liveUrl` field** to the project data:
+   ```ts
+   liveUrl: "https://movie-application-inky.vercel.app/"
+   ```
 
-2. **Reorder for Web/Mobile Apps**: Move the **Custom ChatBot** entry (id 5) above the **HorusCast** entry (id 9) in the `projects` array so it appears first when the "Web/Mobile Apps" filter is active. Movie Search (id 10) follows.
+2. **Add a "Live View" button** in the action buttons row, alongside the existing GitHub button. Uses the same outline button style as the other action buttons (View more / Video / GitHub) with an `ExternalLink` icon from lucide-react for visual consistency.
 
-Final order in the array (top portion): Agentic Financial Claim Assistant → Custom ChatBot → HorusCast → Movie Search → rest unchanged.
+3. **Make the project image clickable** when `liveUrl` exists — wrap the `<img>` in an `<a href={project.liveUrl} target="_blank" rel="noopener noreferrer">` with a subtle hover cursor. Image-only projects without a liveUrl remain non-clickable.
 
-Custom ChatBot keeps `["Web/Mobile Apps", "Selected"]` so it remains in Selected too.
-
-Only `src/pages/Projects.tsx` is modified.
+### Implementation notes
+- Add `ExternalLink` to the existing `lucide-react` import.
+- Render the Live View button conditionally (`{project.liveUrl && ...}`) so it only appears for projects that have a live deployment — future projects can opt in by adding `liveUrl`.
+- Button order: View more → Live View → Video → GitHub.
+- No theme, color, font, or layout changes. Only `src/pages/Projects.tsx` is modified.
 
