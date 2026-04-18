@@ -186,12 +186,15 @@ const Projects = () => {
                         </a>
                       )}
                       {"liveUrl" in project && (project as any).liveUrl && (
-                        <Button variant="outline" size="sm" className="rounded-full px-5 sm:px-6 gap-2 text-xs sm:text-sm" asChild>
-                          <a href={(project as any).liveUrl} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                            Live View
-                          </a>
-                        </Button>
+                        <a
+                          href={(project as any).liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 h-9 px-5 sm:px-6 text-xs sm:text-sm font-medium rounded-base bg-primary text-primary-foreground border-2 border-nb-border shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                          Live View
+                        </a>
                       )}
                       {"videoUrl" in project && (project as any).videoUrl && (
                         <Button variant="outline" size="sm" className="rounded-full px-5 sm:px-6 gap-2 text-xs sm:text-sm" asChild>
