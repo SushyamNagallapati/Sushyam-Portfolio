@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Github, Play, ExternalLink } from "lucide-react";
 
-type ProjectCategory = "Selected" | "AI/ML Experiments" | "Web/Mobile Apps" | "Design System Components";
+type ProjectCategory = "Selected" | "AI/ML Experiments" | "Web/Mobile Apps" | "Hardware/IoT";
 
 const categories: ProjectCategory[] = [
   "Selected",
   "AI/ML Experiments",
   "Web/Mobile Apps",
-  "Design System Components",
+  "Hardware/IoT",
 ];
 
 const projects = [
@@ -104,7 +104,7 @@ const projects = [
     image: iotMachiningImg,
     viewMoreUrl: "https://drive.google.com/file/d/1l86K94k6X1TRprfh9AVbgrFCd-S3wJwT/view?usp=sharing",
     githubUrl: "https://github.com/SushyamNagallapati/IOT-BASED-CONTROL-OF-MACHINING-PROCESS-USING-PLC-AND-ESP32",
-    categories: ["Design System Components"] as ProjectCategory[],
+    categories: ["Hardware/IoT"] as ProjectCategory[],
   },
   {
     id: 8,
@@ -115,7 +115,7 @@ const projects = [
     viewMoreUrl: "https://drive.google.com/file/d/1bUUpsJsVT-K2xgDWUHSZJhYoxI_heK86/view?usp=sharing",
     videoUrl: "https://docs.google.com/videos/d/1_kb1BwpyCrv-dZ0lvJdkU0YRG1yVs3SdY_Vkv6-jXrY/edit?usp=sharing",
     githubUrl: "",
-    categories: ["Design System Components"] as ProjectCategory[],
+    categories: ["Hardware/IoT"] as ProjectCategory[],
   },
 ];
 
