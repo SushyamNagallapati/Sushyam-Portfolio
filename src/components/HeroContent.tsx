@@ -1,37 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
 
-const skillCategories = [
-  { label: "Languages", skills: ["Python", "TypeScript", "JavaScript", "SQL"] },
-  { label: "Frontend", skills: ["React.js", "HTML", "CSS", "Tailwind CSS"] },
-  {
-    label: "Backend",
-    skills: ["Node.js", "Express.js", "FastAPI", "REST APIs"],
-  },
-  {
-    label: "AI / LLM",
-    skills: [
-      "LLM Agents",
-      "RAG",
-      "LangGraph",
-      "LLaMA 3.2",
-      "OpenAI API",
-      "Prompt Engineering",
-      "ChromaDB",
-    ],
-  },
-  {
-    label: "Tools",
-    skills: ["Git", "GitHub", "VS Code", "Postman", "Jira", "Linux/Unix"],
-  },
+const techStack = [
+  "React",
+  "TypeScript",
+  "Next.js",
+  "Node.js",
+  "Python",
+  "FastAPI",
+  "PostgreSQL",
+  "LLM/RAG",
 ];
 
 const HeroContent = () => {
   return (
     <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
       {/* Eyebrow */}
-      <p className="text-sm font-medium text-primary tracking-widest uppercase mb-4">
+      <p className="text-sm font-medium text-muted-foreground tracking-widest uppercase mb-4">
         Software Engineer · AI/ML · Full Stack
       </p>
 
@@ -42,7 +27,7 @@ const HeroContent = () => {
 
       {/* Bio */}
       <p className="text-muted-foreground max-w-md leading-relaxed text-sm sm:text-[0.95rem] mb-8">
-        I'm an engineer who started with hardware and moved into software and AI. Currently completing my MEng in System Design at the University of Waterloo, I've worked on everything from IoT systems and robotic arms to multi-agent AI, RAG pipelines, and full-stack web applications.
+        Frontend-focused full-stack engineer building polished web apps with React and TypeScript. Currently finishing my MEng at the University of Waterloo, with experience shipping production features across multi-agent AI systems, RAG pipelines, IoT, and the UIs that make them usable.
       </p>
 
       {/* Buttons */}
@@ -50,7 +35,7 @@ const HeroContent = () => {
         <Button
           variant="default"
           size="lg"
-          className="rounded-full px-8 font-medium text-sm tracking-wide shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
+          className="rounded-full px-8 font-medium text-sm tracking-wide shadow-md hover:shadow-md transition-all duration-300"
           asChild
         >
           <Link to="/projects">PROJECTS</Link>
@@ -71,29 +56,30 @@ const HeroContent = () => {
         </Button>
       </div>
 
-      {/* Skills */}
+      {/* Currently */}
+      <div className="flex items-center gap-2 mb-5">
+        <span
+          aria-hidden
+          className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"
+        />
+        <p className="text-xs text-muted-foreground">
+          Currently — MEng @ Waterloo · Open to new grad roles
+        </p>
+      </div>
+
+      {/* Tech Stack */}
       <div className="max-w-md">
-        <h2 className="font-serif text-base font-bold text-foreground mb-3">
-          Skills
+        <h2 className="text-xs font-medium text-foreground/60 uppercase tracking-wider mb-3">
+          Tech Stack
         </h2>
-        <div className="space-y-3">
-          {skillCategories.map((category) => (
-            <div key={category.label}>
-              <span className="text-xs font-medium text-foreground/60 uppercase tracking-wider">
-                {category.label}
-              </span>
-              <div className="flex flex-wrap gap-1.5 mt-1.5">
-                {category.skills.map((skill) => (
-                  <Badge
-                    key={skill}
-                    variant="secondary"
-                    className="text-xs font-normal"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </div>
+        <div className="flex flex-wrap gap-1.5">
+          {techStack.map((item) => (
+            <span
+              key={item}
+              className="text-xs text-muted-foreground border border-border/60 rounded-full px-3 py-1"
+            >
+              {item}
+            </span>
           ))}
         </div>
       </div>
