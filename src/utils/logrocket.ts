@@ -2,7 +2,7 @@
 // enabled via env), client-side only, and resilient to load failures.
 
 let initialized = false;
-let lrModule: typeof import("logrocket") | null = null;
+let lrInstance: { identify: (id: string, traits?: Record<string, string>) => void } | null = null;
 
 const SENSITIVE_KEYS = ["password", "token", "secret", "apikey", "authorization"];
 
@@ -58,7 +58,7 @@ export async function initLogRocket(): Promise<void> {
         },
       },
     });
-    lrModule = mod;
+    lrInstance = mod.default;
     initialized = true;
   } catch (err) {
     // Never let analytics break the app.
@@ -67,12 +67,12 @@ export async function initLogRocket(): Promise<void> {
 }
 
 export function identifyUser(userId?: string, name?: string, email?: string): void {
-  if (!initialized || !lrModule || !userId) return;
+  if (!initialized || !lrInstance || !userId) return;
   const traits: Record<string, string> = {};
   if (name) traits.name = name;
   if (email) traits.email = email;
   try {
-    lrModule.default.identify(userId, traits);
+    lrInstance.identify(userId, traits);
   } catch (err) {
     console.warn("[LogRocket] identify failed", err);
   }
