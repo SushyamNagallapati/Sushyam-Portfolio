@@ -63,7 +63,7 @@ const HeroContent = () => {
           className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"
         />
         <p className="text-xs text-muted-foreground">
-          Currently — MEng @ Waterloo · Open to new grad roles
+          Open to New Opportunities
         </p>
       </div>
 
