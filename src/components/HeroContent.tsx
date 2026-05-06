@@ -40,20 +40,14 @@ const HeroContent = () => {
         >
           <Link to="/projects">PROJECTS</Link>
         </Button>
-        <Button
-          variant="outline"
-          size="lg"
-          className="rounded-full px-8 font-medium text-sm tracking-wide hover:bg-foreground hover:text-background transition-all duration-300"
-          asChild
+        <a
+          href="https://drive.google.com/file/d/1_vDMkN7Duow5DrriBFWrxN1F4xY-Ujvx/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center h-11 px-8 text-sm font-medium tracking-wide rounded-base bg-background text-foreground border-2 border-nb-border shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all"
         >
-          <a
-            href="https://drive.google.com/file/d/1_vDMkN7Duow5DrriBFWrxN1F4xY-Ujvx/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            RESUME
-          </a>
-        </Button>
+          RESUME
+        </a>
       </div>
 
       {/* Currently */}
