@@ -1,27 +1,13 @@
-// LogRocket integration — initialized only in production (or when explicitly
-// enabled via env), client-side only, and resilient to load failures.
+// LogRocket integration via CDN script — app ID is read from a build-time env
+// variable (VITE_LOGROCKET_APP_ID) so it never appears as a literal string in
+// source. Note: any client-side analytics ID is ultimately visible in the
+// browser; secure it via the LogRocket dashboard's domain allowlist.
 
 let initialized = false;
-let lrInstance: { identify: (id: string, traits?: Record<string, string>) => void } | null = null;
 
-const SENSITIVE_KEYS = ["password", "token", "secret", "apikey", "authorization"];
-
-function scrub<T>(value: T): T {
-  if (!value || typeof value !== "object") return value;
-  const clone: any = Array.isArray(value) ? [...(value as any)] : { ...(value as any) };
-  for (const key of Object.keys(clone)) {
-    if (SENSITIVE_KEYS.includes(key.toLowerCase())) {
-      clone[key] = "[REDACTED]";
-    } else if (clone[key] && typeof clone[key] === "object") {
-      clone[key] = scrub(clone[key]);
-    }
-  }
-  return clone;
-}
-
-export async function initLogRocket(): Promise<void> {
+export function initLogRocket(): void {
   if (initialized) return;
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined" || typeof document === "undefined") return;
 
   const appId = import.meta.env.VITE_LOGROCKET_APP_ID as string | undefined;
   const enableInDev = import.meta.env.VITE_LOGROCKET_ENABLE_IN_DEV === "true";
@@ -30,49 +16,34 @@ export async function initLogRocket(): Promise<void> {
   if (!import.meta.env.PROD && !enableInDev) return;
 
   try {
-    const mod = await import("logrocket");
-    mod.default.init(appId, {
-      network: {
-        requestSanitizer: (request) => {
-          if (request.headers && request.headers.Authorization) {
-            request.headers.Authorization = "";
-          }
-          if (request.body) {
-            try {
-              request.body = JSON.stringify(scrub(JSON.parse(request.body as string)));
-            } catch {
-              /* non-JSON body — leave as-is */
-            }
-          }
-          return request;
-        },
-        responseSanitizer: (response) => {
-          if (response.body) {
-            try {
-              response.body = JSON.stringify(scrub(JSON.parse(response.body as string)));
-            } catch {
-              /* non-JSON body — leave as-is */
-            }
-          }
-          return response;
-        },
-      },
-    });
-    lrInstance = mod.default;
+    const script = document.createElement("script");
+    script.src = "https://cdn.logr-in.com/LogRocket.min.js";
+    script.crossOrigin = "anonymous";
+    script.async = true;
+    script.onload = () => {
+      const lr = (window as unknown as { LogRocket?: { init: (id: string) => void } }).LogRocket;
+      if (lr && typeof lr.init === "function") {
+        lr.init(appId);
+      }
+    };
+    document.head.appendChild(script);
     initialized = true;
   } catch (err) {
-    // Never let analytics break the app.
     console.warn("[LogRocket] failed to initialize", err);
   }
 }
 
 export function identifyUser(userId?: string, name?: string, email?: string): void {
-  if (!initialized || !lrInstance || !userId) return;
+  if (!initialized || !userId) return;
+  const lr = (window as unknown as {
+    LogRocket?: { identify: (id: string, traits?: Record<string, string>) => void };
+  }).LogRocket;
+  if (!lr || typeof lr.identify !== "function") return;
   const traits: Record<string, string> = {};
   if (name) traits.name = name;
   if (email) traits.email = email;
   try {
-    lrInstance.identify(userId, traits);
+    lr.identify(userId, traits);
   } catch (err) {
     console.warn("[LogRocket] identify failed", err);
   }
