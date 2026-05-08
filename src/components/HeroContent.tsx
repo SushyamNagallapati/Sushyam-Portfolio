@@ -1,20 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
-const techStack = [
-  "React",
-  "TypeScript",
-  "JavaScript",
-  "Python",
-  "Node.js",
-  "FastAPI",
-  "LangGraph",
-  "OpenAI API",
-  "RAG",
-  "Tailwind CSS",
-  "REST APIs",
-  "SQLite",
-];
+import TechStackStrip from "@/components/TechStackStrip";
 
 const HeroContent = () => {
   return (
@@ -70,16 +56,8 @@ const HeroContent = () => {
         <h2 className="text-xs font-medium text-foreground/60 uppercase tracking-wider mb-3">
           Tech Stack
         </h2>
-        <div className="flex flex-wrap gap-1.5">
-          {techStack.map((item) => (
-            <span
-              key={item}
-              className="text-xs text-muted-foreground border border-border/60 rounded-full px-3 py-1"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
+        <TechStackStrip />
+
       </div>
     </div>
   );
