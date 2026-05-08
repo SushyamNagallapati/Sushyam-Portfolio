@@ -1,20 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
-const techStack = [
-  "React",
-  "TypeScript",
-  "JavaScript",
-  "Python",
-  "Node.js",
-  "FastAPI",
-  "LangGraph",
-  "OpenAI API",
-  "RAG",
-  "Tailwind CSS",
-  "REST APIs",
-  "SQLite",
-];
+import TechStackStrip from "@/components/TechStackStrip";
 
 const HeroContent = () => {
   return (
