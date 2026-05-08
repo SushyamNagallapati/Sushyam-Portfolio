@@ -4,12 +4,16 @@ import { Link } from "react-router-dom";
 const techStack = [
   "React",
   "TypeScript",
-  "Next.js",
-  "Node.js",
+  "JavaScript",
   "Python",
+  "Node.js",
   "FastAPI",
-  "PostgreSQL",
-  "LLM/RAG",
+  "LangGraph",
+  "OpenAI API",
+  "RAG",
+  "Tailwind CSS",
+  "REST APIs",
+  "SQLite",
 ];
 
 const HeroContent = () => {

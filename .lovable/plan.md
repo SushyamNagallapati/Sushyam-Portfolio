@@ -1,7 +1,9 @@
-## Update Resume Link
+## Update Tech Stack
 
-Replace the RESUME button's `href` in `src/components/HeroContent.tsx` with the new Google Drive URL:
+In `src/components/HeroContent.tsx`, replace the `techStack` array with:
 
-`https://drive.google.com/file/d/126JI9aQvQU0hWq553fLzv8OrTuS7K7I7/view?usp=sharing`
+```
+React, TypeScript, JavaScript, Python, Node.js, FastAPI, LangGraph, OpenAI API, RAG, Tailwind CSS, REST APIs, SQLite
+```
 
 No other changes.
