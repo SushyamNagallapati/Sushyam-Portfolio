@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import ProfileCard from "@/components/ProfileCard";
 import HeroContent from "@/components/HeroContent";
 import Footer from "@/components/Footer";
+import TechStackStrip from "@/components/TechStackStrip";
 
 const Index = () => {
   return (
