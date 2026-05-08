@@ -35,7 +35,7 @@ const Index = () => {
 
           {/* Tech Stack — centered, full-width strip */}
           <div className="mt-16 lg:mt-20 flex flex-col items-center text-center">
-            <h2 className="text-xs font-medium text-foreground/60 uppercase tracking-[0.2em] mb-5">
+            <h2 className="text-sm sm:text-base font-medium text-foreground/60 uppercase tracking-[0.2em] mb-5">
               Tech Stack
             </h2>
             <div className="w-full">
