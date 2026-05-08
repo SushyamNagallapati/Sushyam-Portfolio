@@ -27,7 +27,7 @@ const HeroContent = () => {
 
       {/* Bio */}
       <p className="text-muted-foreground max-w-md leading-relaxed text-sm sm:text-[0.95rem] mb-8">
-        Frontend-focused full-stack engineer building polished web apps with React and TypeScript. Currently finishing my MEng at the University of Waterloo, with experience shipping production features across multi-agent AI systems, RAG pipelines, IoT, and the UIs that make them usable.
+        Full-stack engineer and MEng candidate at the University of Waterloo, specialized in AI/ML systems and web development. I build multi-agent AI pipelines, RAG systems, and full-stack web apps and care about making them fast, readable, and usable.
       </p>
 
       {/* Buttons */}
