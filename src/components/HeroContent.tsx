@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import TechStackStrip from "@/components/TechStackStrip";
 
 const HeroContent = () => {
   return (
