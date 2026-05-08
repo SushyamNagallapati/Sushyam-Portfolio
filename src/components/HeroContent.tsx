@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import TechStackStrip from "@/components/TechStackStrip";
 
 const HeroContent = () => {
   return (
@@ -51,14 +50,6 @@ const HeroContent = () => {
         </p>
       </div>
 
-      {/* Tech Stack */}
-      <div className="max-w-md">
-        <h2 className="text-xs font-medium text-foreground/60 uppercase tracking-wider mb-3">
-          Tech Stack
-        </h2>
-        <TechStackStrip />
-
-      </div>
     </div>
   );
 };

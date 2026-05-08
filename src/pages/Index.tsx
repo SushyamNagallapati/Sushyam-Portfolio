@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import ProfileCard from "@/components/ProfileCard";
 import HeroContent from "@/components/HeroContent";
 import Footer from "@/components/Footer";
+import TechStackStrip from "@/components/TechStackStrip";
 
 const Index = () => {
   return (
@@ -29,6 +30,16 @@ const Index = () => {
             {/* Profile Photo */}
             <div className="flex justify-center lg:justify-end flex-shrink-0">
               <ProfileCard />
+            </div>
+          </div>
+
+          {/* Tech Stack — centered, full-width strip */}
+          <div className="mt-16 lg:mt-20 flex flex-col items-center text-center">
+            <h2 className="text-xs font-medium text-foreground/60 uppercase tracking-[0.2em] mb-5">
+              Tech Stack
+            </h2>
+            <div className="w-full">
+              <TechStackStrip />
             </div>
           </div>
         </div>
